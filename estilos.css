@@ -18,7 +18,37 @@
     background-color: #fff;
  }
 
- .navbar-brand{
-   height: 60px;
-   width: 60px;
- }
+.navbar-brand{
+    height: 60px;
+    width: 60px;
+  }
+
+/*------------->RECETAS<------------*/
+.SectionRecetas{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorRecetas{
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#contenedorRecetaImgMedio{
+    align-items: flex-end;
+    
+}
+
+.contenedorRecetaImg{
+    border: 1px solid black;
+    width: 25%;
+    height: 85%;
+    margin: 10px;
+    align-self: center;
+}
+
