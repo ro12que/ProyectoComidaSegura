@@ -24,8 +24,52 @@
  }
 
  .footer{
-  margin-top: 90px;
+  height: auto;
+  width: 100%;
+  padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  position: absolute;
+  bottom: 0;
+  
  }
+/*
+.btn{
+  background-color: #fbb034;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffdd00;
+  transform: scale(1.05);
+}
+*/
+
+.footer-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 3rem;
+  
+}
+
+.copy{
+display: flex;
+margin-top: 10px;
+align-self:center;
+
+ } 
+
+.logo-links{
+  color: #000;
+
+}
+
