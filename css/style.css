@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(236,241,237);
+}
+
+.img-fluid{
+	height: 300px;
+	width: 100%;
+	float: center;
+}
+
+.sombra:hover {
+    filter: opacity(.5);
+}
+
+.btn-warning{
+                background-color: orangered;
+}
