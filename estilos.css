@@ -22,6 +22,11 @@
    height: 60px;
    width: 60px;
  }
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> agus-branch
  /*------------->BUSCADOR<------------*/
 
  .img-fluid{
@@ -37,7 +42,11 @@
 
 
 .btn-warning{
+<<<<<<< HEAD
    background-color: orangered;
+=======
+   background-color: #fbb034 ;
+>>>>>>> agus-branch
   }
 
 
@@ -68,6 +77,10 @@
     margin: 10px;
     align-self: center;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> agus-branch
 
  .footer{
   height: auto;
