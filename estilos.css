@@ -71,10 +71,6 @@
     margin: 10px;
     align-self: center;
 }
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> agus-branch
 
  .footer{
   height: auto;
@@ -88,21 +84,6 @@
  
   
  }
-/*
-.btn{
-  background-color: #fbb034;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 15px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #ffdd00;
-  transform: scale(1.05);
-}
-*/
 
 .footer-logos {
   display: flex;
