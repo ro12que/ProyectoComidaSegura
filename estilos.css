@@ -16,12 +16,14 @@
 
  body{
     background-color: #fff;
+    /* background-image: url( imagenes/logo-chiquito.png); */
  }
 
  .navbar-brand{
    height: 60px;
    width: 60px;
  }
+
 
  .footer{
   height: auto;
