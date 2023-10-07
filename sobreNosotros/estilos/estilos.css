@@ -16,63 +16,76 @@
 
  body{
     background-color: #fff;
-    /* background-image: url( imagenes/logo-chiquito.png); */
  }
 
  .navbar-brand{
    height: 60px;
    width: 60px;
  }
+ /*------------->Section fotos<------------*/
 
-
- /*------------->BUSCADOR<------------*/
-
- .img-fluid{
-    height: 300px;
+ .contenedorFotoGrupal{
     width: 100%;
-    float: center;
-  }
-
-
-.sombra:hover {
-  filter: opacity(.5);
-  }
-
-
-.btn-warning{
-   background-color: #fbb034 ;
-
-  }
-
-
- /*------------->RECETAS<------------*/
-.SectionRecetas{
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
-}
-
-.contenedorRecetas{
-    border: 1px solid black;
-    height: 200px;
-    width: 100%;
-    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 5px;
-    display: flex;
-    justify-content: flex-start;
 }
 
-#contenedorRecetaImgMedio{
-    align-items: flex-end;
-}
+.fotoGrupal{
 
-.contenedorRecetaImg{
     border: 1px solid black;
-    width: 25%;
-    height: 85%;
-    margin: 10px;
-    align-self: center;
+    width: 30%;
+
 }
 
+.sectionFotoIndividual{
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5px;
+
+
+}
+
+.contenedorFotoIndividual{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 5px 5px #6b6b6b;
+    gap: 2px;
+}
+
+.fotoIndividual{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+.logo-links-foto-individual{ 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #000;
+}
+
+.contenedorFotoIndividual > i {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+ /*------------->Footer<------------*/
  .footer{
   height: auto;
   width: 100%;
@@ -82,9 +95,10 @@
   flex-direction: column;
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
- 
-  
+  position: absolute;
+  bottom: 0;
  }
+
 
 .footer-logos {
   display: flex;
@@ -92,18 +106,15 @@
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   gap: 3rem;
-  
 }
 
 .copy{
 display: flex;
 margin-top: 10px;
 align-self:center;
-
  } 
 
 .logo-links{
   color: #000;
-
 }
 
