@@ -12,6 +12,27 @@
     height: 10vh;
     width: 100%;
 }
+.logoGrande{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.textoSobreFotoGrupal{
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 
  body{
@@ -60,6 +81,9 @@
     flex-direction: column;
     box-shadow: 5px 5px 5px #6b6b6b;
     gap: 2px;
+    height: 250px;
+    width: 250px;
+    text-align: center;
 }
 
 .fotoIndividual{
@@ -95,6 +119,11 @@
   flex-direction: column;
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+<<<<<<< HEAD
+=======
+  
+  bottom: 0;
+>>>>>>> Rodrigo
  }
 
 
