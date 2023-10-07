@@ -15,7 +15,7 @@
 
 
  body{
-    background-color: #fff;
+    background-color: #a7a7a7;
  }
 
  .navbar-brand{
@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 5px 5px #6b6b6b;
+    box-shadow: 5px 5px 5px #6b6b6b;
     gap: 2px;
 }
 
@@ -95,8 +95,6 @@
   flex-direction: column;
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
-  position: absolute;
-  bottom: 0;
  }
 
 
