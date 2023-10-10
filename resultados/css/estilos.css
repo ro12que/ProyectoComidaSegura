@@ -8,30 +8,35 @@
 
 .navbar{
     background-color: #fbb034;
-    background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+    background-image: linear-gradient(315deg, #fbb034 50%, #ffdd00 50%);
     height: 10vh;
     width: 100%;
 }
 
 
  body{
-    background-color: #fff;
+    background-color: #fffcfe;
     display: flex;
     flex-direction: column;
  }
 
  .navbar-brand{
-   height: 60px;
+   height: 90px;
    width: 60px;
  }
 
 
  /*------------->BUSCADOR<------------*/
+ .buscador{
+  text-align: center;
+}
+
 
  .img-fluid{
     height: 300px;
     width: 100%;
     float: center;
+    z-index: 1;width:35vw; height:15vw;
   }
 
 
@@ -47,8 +52,16 @@
 
   /*---------RESULTADOS---------*/
 
-  .resultadosContainer{
-    border: 1px solid #000;
+  .fondo{
+    background-image: url(../../imagenes/ejemplo1.png);
+}
+  .resultadoContainer{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .sellos{
+    height: 60px;
+    width: 60px;
   }
 
   /*-----------FOOTER------------*/
@@ -61,7 +74,7 @@
     display: flex;
     flex-direction: column;
     background-color: #fbb034;
-    background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+    background-image: linear-gradient(315deg, #ffdd00  50%, #fbb034 50%);
    align-self: baseline;
     
    }
