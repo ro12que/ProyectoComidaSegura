@@ -8,34 +8,29 @@
 
 .navbar{
     background-color: #fbb034;
-    background-image: linear-gradient(315deg, #fbb034 50%, #ffdd00 50%);
+    background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
     height: 10vh;
     width: 100%;
 }
 
 
  body{
-    background-color: #fffcfe;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
+    /* background-image: url( imagenes/logo-chiquito.png); */
  }
 
  .navbar-brand{
-   height: 90px;
+   height: 60px;
    width: 60px;
  }
 
 
  /*------------->BUSCADOR<------------*/
-.buscador{
-          text-align: center;
-}
- 
+
  .img-fluid{
     height: 300px;
     width: 100%;
     float: center;
-    z-index: 1;width:35vw; height:15vw;
   }
 
 
@@ -51,26 +46,19 @@
 
 
  /*------------->RECETAS<------------*/
-.fondo{
-    background-image: url(../imagenes/ejemplo1.png);
-}
-
- .SectionRecetas{
+.SectionRecetas{
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 .contenedorRecetas{
     border: 1px solid black;
-    height: 300px;
+    height: 200px;
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 20px;
 }
 
 #contenedorRecetaImgMedio{
@@ -85,8 +73,6 @@
     align-self: center;
 }
 
-/*-----------FOOTER------------*/
-
  .footer{
   height: auto;
   width: 100%;
@@ -95,8 +81,8 @@
   display: flex;
   flex-direction: column;
   background-color: #fbb034;
-  background-image: linear-gradient(315deg, #ffdd00 50%, #fbb034 50%);
-  align-self: baseline;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+ 
   
  }
 
@@ -121,3 +107,36 @@ align-self:center;
 
 }
 
+.contenedorTotal {
+  width: 70%; /* Ancho de la tarjeta */
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  
+}
+.fotoIndividual{
+  border: 1px solid #000000;
+  
+ 
+}
+
+.contenedorTextos{
+align-items: center;
+
+ 
+}
+
+.titulo{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.texto{
+  width: 100%;
+  margin: 0 auto;
+}
