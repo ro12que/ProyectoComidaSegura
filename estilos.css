@@ -107,3 +107,36 @@ align-self:center;
 
 }
 
+.contenedorTotal {
+  width: 70%; /* Ancho de la tarjeta */
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  
+}
+.fotoIndividual{
+  border: 1px solid #000000;
+  
+ 
+}
+
+.contenedorTextos{
+align-items: center;
+
+ 
+}
+
+.titulo{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.texto{
+  width: 100%;
+  margin: 0 auto;
+}
