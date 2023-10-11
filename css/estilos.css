@@ -16,6 +16,7 @@
 
  body{
     background-color: #fff;
+    display: flex;
  }
 
  .navbar-brand{
@@ -25,10 +26,6 @@
 
 
  /*------------->BUSCADOR<------------*/
-
-.buscador{
-  margin-bottom: 20px;
-}
 
  .img-fluid{
     height: 300px;
@@ -74,26 +71,10 @@
     height: 85%;
     margin: 10px;
     align-self: center;
-    position: relative;
 }
 
-.fotosindex1{
-  border: 1px solid black;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.contexto{
-  border: none;
-  width: 75%;
-  height: 85%;
-  margin: 10px;
-  align-self: center;
-  position: relative;
-  overflow: hidden;
-}
+/*-----------FOOTER------------*/
 
-/*-----------FOOTER-------------*/
  .footer{
   height: auto;
   width: 100%;
@@ -103,7 +84,7 @@
   flex-direction: column;
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
- 
+ align-self: baseline;
   
  }
 
@@ -127,3 +108,4 @@ align-self:center;
   color: #000;
 
 }
+
