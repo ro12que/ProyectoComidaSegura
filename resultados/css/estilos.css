@@ -76,6 +76,9 @@
     background-color: #fbb034;
     background-image: linear-gradient(315deg, #ffdd00  50%, #fbb034 50%);
    align-self: baseline;
+   margin-top: auto;
+   position: fixed;
+    bottom: 0;
     
    }
   
