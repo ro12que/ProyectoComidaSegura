@@ -25,6 +25,10 @@ const APIProductSearchTags = `https://es.openfoodfacts.org/cgi/search.pl?search_
 
 const createRes = document.createDocumentFragment(`section`);
 
+const botonBusqueda = document.getElementById("botonBusqueda");
+
+botonBusqueda.addEventListener('click', function(){ 
+
 const respuesta = fetch (APIProductSearch)
     .then(res => res.json )
     .then(data => {
@@ -33,16 +37,16 @@ const respuesta = fetch (APIProductSearch)
             elemento.innerHTML(`
             <div class="col"> 
                 <div class="card h-100"> 
-                    <img src= `;{Response.foto}` class="card-img-top" alt="...">
+                    <img src= ${Response.foto} class="card-img-top" alt="...">
                         <div class="card-body"> 
-                            <h5 class="card-title">`;{Response.product_name}`</h5> 
-                            <p class="card-text">`;{objeto.descripcion}`</p> 
+                            <h5 class="card-title">${Response.product_name}</h5> 
+                            <p class="card-text">${objeto.descripcion}</p> 
                         </div>
                         <div class="card-footer"> 
                             <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
-                            <img class="sellos" src=`;{sellosValor}` alt="durazno"/>
-                            <img class="sellos" src=`;{sellosValordos}` alt="durazno"/> 
-                            <img class="sellos" src=`;{sellosValortres}` alt="durazno"/>
+                            <img class="sellos" src=${sellosValor} alt="durazno"/>
+                            <img class="sellos" src=${sellosValordos} alt="durazno"/> 
+                            <img class="sellos" src=${sellosValortres} alt="durazno"/>
                         </div> 
                 </div> 
             </div>`)
@@ -50,7 +54,7 @@ const respuesta = fetch (APIProductSearch)
         });
     })
 
-
+})
 
     sellosValor = 7;
     var sellosAsignacion = document.getElementsByClassName("sellos").src = sellosValor;
