@@ -28,12 +28,12 @@ function tagsDesignacion () {
 
 
     botonBusqueda.addEventListener('click', function() {
-        const userinput = getElementsById("search");
+        const userinput = document.getElementById('search')
         userSearch = userinput.value;
         console.log(userSearch);
 
         const APIProductSearch = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true`;
-        const APIProductSearchWTgas = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true&allergens=${alergeno}`; 
+        //const APIProductSearchWTgas = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true&allergens=${alergeno}`; 
         const createRes = document.createDocumentFragment(`section`);
 
         const respuesta = fetch (APIProductSearch)
@@ -52,17 +52,15 @@ function tagsDesignacion () {
                 sugars: enum.
                 Allowed: low┃moderate┃high}
 
-                    if (  && data.nutrient_levels.sugars = low){
+                    if (data.products.nutrient_levels.sugars = moderate || high ){
 
                     }
-                    if (data.nutriments.sodium >= '5g'){
-
-                    }
-
+                    if (data.products.nutriments_levels.salt = moderate || high)
 
                 
                 */
-                data.forEach(product => {
+                console.log(data)
+                data.products.forEach(product => {
                     let elemento = document.createElement(`div`);
                     elemento.className = 'resultadoContainer col';
                     elemento.innerHTML = `
@@ -70,14 +68,12 @@ function tagsDesignacion () {
                         <div class="card h-100"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
-                                    <h5 class="card-title">${product.product_name}</h5> 
+                                    <h5 class="card-title">${product.product_name_es}</h5> 
                                     <p class="card-text">${product.generic_name}</p> 
                                 </div>
                                 <div class="card-footer"> 
                                     <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
-                                    <img class="sellos" src=${sellosValor} alt="durazno"/>
-                                    <img class="sellos" src=${sellosValordos} alt="durazno"/> 
-                                    <img class="sellos" src=${sellosValortres} alt="durazno"/>
+
                                 </div> 
                         </div> 
                     </div>`;
@@ -90,7 +86,9 @@ function tagsDesignacion () {
 
     })
 
-/*
+/*                                    <!--<img class="sellos" src=${sellosValor} alt="durazno"/>
+                                    <img class="sellos" src=${sellosValordos} alt="durazno"/> 
+                                    <img class="sellos" src=${sellosValortres} alt="durazno"/> -->
     sellosValor = 7;
     var sellosAsignacion = document.getElementsByClassName("sellos").src = sellosValor;
     var resultado = array.forEach(element => {
