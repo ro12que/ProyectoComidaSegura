@@ -28,7 +28,7 @@ function tagsDesignacion () {
 
 
     botonBusqueda.addEventListener('click', function() {
-        const userinput = getElementsById("search");
+        const userinput = document.getElementById('search')
         userSearch = userinput.value;
         console.log(userSearch);
 
@@ -81,6 +81,7 @@ function tagsDesignacion () {
                                 </div> 
                         </div> 
                     </div>`;
+                    console.log(data);
                     createRes.appendChild(elemento);
                 });
             })
