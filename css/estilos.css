@@ -49,7 +49,18 @@
 
   }
 
+/* ------------------------BOTONES------------------ */
 
+#boton2{
+      font-size: 17px;
+}
+
+#boton1{
+      
+      color: black;
+      font-family: 'Nunito', sans-serif;
+      font-size: 17px;
+}
  /*------------->RECETAS<------------*/
 .fondo{
     background-image: url(../imagenes/ejemplo1.png);
