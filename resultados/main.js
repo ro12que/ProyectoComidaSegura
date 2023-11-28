@@ -17,28 +17,6 @@ function tagsDesignacion () {
 }
     const Sodium = ``; //hipertenso
 };*/
-
-//const APIProductSearchTags = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true&allergens=${alergeno}` ;
-
-
-
-//document.addEventListener('DOMcontentLoaded', function(){ agregar al final 
-    const botonBusqueda = document.getElementById("botonBusqueda");
-    
-
-
-    botonBusqueda.addEventListener('click', function() {
-        const userinput = document.getElementById('search')
-        userSearch = userinput.value;
-        console.log(userSearch);
-
-        const APIProductSearch = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true`;
-        //const APIProductSearchWTgas = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true&allergens=${alergeno}`; 
-        const createRes = document.createDocumentFragment(`section`);
-
-        const respuesta = fetch (APIProductSearch)
-            .then(res => res.json())
-            .then(data => {
                 /* Sistema de tags
 
                 nutrient_levels: {
@@ -59,9 +37,31 @@ function tagsDesignacion () {
 
                 
                 */
+
+//const APIProductSearchTags = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true&allergens=${alergeno}` ;
+
+
+
+//document.addEventListener('DOMcontentLoaded', function(){ agregar al final 
+    const botonBusqueda = document.getElementById("botonBusqueda");
+    
+
+
+    botonBusqueda.addEventListener('click', function() {
+        const userinput = document.getElementById('search')
+        userSearch = userinput.value;
+        console.log(userSearch);
+
+        const APIProductSearch = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true`;
+        //const APIProductSearchWTgas = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=10&json=true&allergens=${alergeno}`; 
+        const createRes = document.getElementById('ResultadoCointainer');
+        const respuesta = fetch (APIProductSearch)
+            .then(res => res.json())
+            .then(data => {
                 console.log(data)
                 data.products.forEach(product => {
-                    let elemento = document.createElement(`div`);
+                    let elemento = document.createElement("div");
+                    createRes.appendChild(elemento);
                     elemento.className = 'resultadoContainer col';
                     elemento.innerHTML = `
                     <div class="col"> 
@@ -78,7 +78,7 @@ function tagsDesignacion () {
                         </div> 
                     </div>`;
                     console.log(data);
-                    createRes.appendChild(elemento);
+                    
                 });
             })
             .catch(error => {
