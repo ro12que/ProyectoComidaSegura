@@ -68,6 +68,7 @@ botonBusqueda.addEventListener('click', function() {
         search_terms: `${userSearch}`, // Reemplaza 'tu_termino_de_búsqueda' por tu término de búsqueda real
         page_size: 20,
         json: {
+            countries: 'Argentina',
             allergens_from_ingredients: [],
             nutrient_levels: {
             },
@@ -78,23 +79,29 @@ botonBusqueda.addEventListener('click', function() {
     for (let i = 0; i < 6; i++) {
     
         switch (trolo[i]) {
-            case Diabetico:
+            case 'Diabetico':
                 queryParams.json.nutrient_levels.sugar ='low';
+                console.log('diabtico');
                 break;
-            case Hipertenso:
+            case 'Hipertenso':
                 queryParams.json.nutrient_levels.salt ='low';
+                console.log('hipertenso');
                 break;
-            case Celiaco:
+            case 'Celiaco':
                 queryParams.json.allergens_from_ingredients.push('gluten');
+                console.log('celiaco');
                 break;
-            case IntoLactosa:
+            case 'IntoLactosa':
                 queryParams.json.allergens_from_ingredients.push('lactose');
+                console.log('intolactosa');
                 break;
-            case Vegetariano:
+            case 'Vegetariano':
                 queryParams.json.ingredients_analysis_tags.push('en:vegetarian');
+                console.log('vegetariano');
                 break;
-            case Vegano:
+            case 'Vegano':
                 queryParams.json.ingredients_analysis_tags.push('en:vegan');
+                console.log('vegano');
                 break;
             default:
     
