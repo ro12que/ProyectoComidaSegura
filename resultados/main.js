@@ -83,6 +83,26 @@ function tagsDesignacion () {
             })
             .catch(error => {
                 console.error('error fecht-data', error);
+               let  carderror=document.createElement("div");
+               createRes.appendChild(carderror);
+               carderror.innerHTML= `
+               <div class="errorcard"> 
+                  <div class="errorimg1"> 
+                       <img src=  class="errorimg" alt="errorfoto">
+                   </div> 
+                   <div class="textoerror">
+                        <h4>ERROR NO SE PUDO REALIZAR LA  BÚSQUEDA!! pruebe lo siguiente: </h4>
+                          <ul>
+                            <li>solucion1</li>
+                            <li>solucion2</li>
+                            <li>solucion3</li>
+                            <li>solucion4</li>
+                          </ul>
+           
+                    </div>
+           </div>`;
+               
+
             })
 
     })
