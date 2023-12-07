@@ -9,48 +9,78 @@ var Vegetariano = document.getElementById("botonVegetariano");//LISTO
 var Hipertenso = document.getElementById("botonHipertenso");//LISTO
 var IntoLactosa = document.getElementById("botonIntoLactosa");//LISTO 6
 
-const trolo = []
+var TagDesignador = []
 
 Celiaco.addEventListener('click', ()=>{
+    if(TagDesignador.includes('Celiaco') === false){
     Celiaco = true;
     console.log(Celiaco)
-    trolo.push('Celiaco')
-    console.log(trolo)
+    TagDesignador.push('Celiaco')
+    console.log(TagDesignador)
+    }else{
+        TagDesignador = TagDesignador.filter(tag=> tag != 'Celiaco');
+        console.log(TagDesignador)
+    }
 });
             
 Diabetico.addEventListener('click', ()=>{
+    if(TagDesignador.includes('Diabetico') === false){
     Diabetico = true;
     console.log(Diabetico)
-    trolo.push('Diabetico')
-    console.log(trolo)
+    TagDesignador.push('Diabetico')
+    console.log(TagDesignador)
+    }else{
+        TagDesignador = TagDesignador.filter(tag=> tag != 'Diabetico');
+        console.log(TagDesignador)
+    }
 });
 
 Vegano.addEventListener('click', ()=>{
+    if(TagDesignador.includes('Vegano') === false){
     Vegano = true;
     console.log(Vegano)
-    trolo.push('Vegano')
-    console.log(trolo)
+    TagDesignador.push('Vegano')
+    console.log(TagDesignador)
+    }else{
+        TagDesignador = TagDesignador.filter(tag=> tag != 'Vegano');
+        console.log(TagDesignador)
+    }
 });
 
 Vegetariano.addEventListener('click', ()=>{
+    if(TagDesignador.includes('Vegetariano') === false){
     Vegetariano = true;
     console.log(Vegetariano)
-    trolo.push('Vegetariano')
-    console.log(trolo)
+    TagDesignador.push('Vegetariano')
+    console.log(TagDesignador)
+    }else{
+        TagDesignador = TagDesignador.filter(tag=> tag != 'Vegetariano');
+        console.log(TagDesignador)
+    }
 });
 
 Hipertenso.addEventListener('click', ()=>{
+    if(TagDesignador.includes('Hipertenso') === false){
     Hipertenso = true;
     console.log(Hipertenso)
-    trolo.push('Hipertenso')
-    console.log(trolo)
+    TagDesignador.push('Hipertenso')
+    console.log(TagDesignador)
+    }else{
+        TagDesignador = TagDesignador.filter(tag=> tag != 'Hipertenso');
+        console.log(TagDesignador)
+    }
 });
 
 IntoLactosa.addEventListener('click', ()=>{
+    if(TagDesignador.includes('intoLactosa') === false){
     IntoLactosa = true;
     console.log(IntoLactosa)
-    trolo.push('intoLactosa')
-    console.log(trolo)
+    TagDesignador.push('intoLactosa')
+    console.log(TagDesignador)
+    }else{
+        TagDesignador = TagDesignador.filter(tag=> tag != 'intoLactosa');
+        console.log(TagDesignador)
+    }
 });
 
 
@@ -78,13 +108,13 @@ botonBusqueda.addEventListener('click', function() {
 
     for (let i = 0; i < 6; i++) {
     
-        switch (trolo[i]) {
+        switch (TagDesignador[i]) {
             case 'Diabetico':
-                queryParams.json.nutrient_levels.sugar ='low';
+                queryParams.json.nutrient_levels.push('sugar: low');
                 console.log('diabtico');
                 break;
             case 'Hipertenso':
-                queryParams.json.nutrient_levels.salt ='low';
+                queryParams.json.nutrient_levels.push('salt: low');
                 console.log('hipertenso');
                 break;
             case 'Celiaco':
@@ -127,15 +157,13 @@ botonBusqueda.addEventListener('click', function() {
                 elemento.className = 'resultadoContainer col';
                 elemento.innerHTML = `
                     <div class="col"> 
-                        <div class="card h-100"> 
+                        <div class="card"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
                                     <h5 class="card-title">${product.product_name_es}</h5> 
                                     <p class="card-text">${product.generic_name}</p> 
                                 </div>
                                 <div class="card-footer"> 
-                                    <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
-
                                 </div> 
                         </div> 
                     </div>`;

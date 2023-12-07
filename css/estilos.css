@@ -10,6 +10,12 @@ html {
   scroll-behavior: smooth;
 }
 
+ body{
+    background-color: #fffcfe;
+    display: flex;
+    flex-direction: column;
+ }
+/*---------->NAVBAR<-----------*/
 .navbar{
     background-color: #fbb034;
     background-image: linear-gradient(315deg, #fbb034 50%, #ffdd00 50%);
@@ -55,18 +61,12 @@ html {
 .navbar-nav li a:hover::before {
   transform: scaleX(1); 
 }
-/**/
+
 .nav-link{
   font-size: medium;
 }
 
- body{
-    background-color: #fffcfe;
-    display: flex;
-    flex-direction: column;
- }
-
- .navbar-brand{
+.navbar-brand{
    height: 44px;
    width: 30px;
  }
