@@ -18,7 +18,6 @@ body{
     height: 10vh;
     width: 100%;
 }
-<<<<<<< HEAD
 .logoGrande{
     grid-column-start: 2;
     grid-column-end: 3;
@@ -34,17 +33,11 @@ body{
 
 
 .textoSobreFotoGrupal{
-
-    
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-
-=======
->>>>>>> master
-
 
 
 
@@ -71,15 +64,15 @@ body{
 
 }
 
-.sectionFotoIndividual{
+/* ============================================== */
 
-    
+/*============CARDS====================*/
+
+.sectionFotoIndividual{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 5px;
-
-
 }
 
 .contenedorFotoIndividual{
@@ -88,17 +81,32 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 5px 5px #6b6b6b;
+    /* box-shadow: 5px 5px #6b6b6b; */
     gap: 2px;
+    height: 270px;
+    width: 250px;
+    text-align: center;
+
+    border-radius: 10px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+    transition: all 0.25s;
+    background-color: #e7e7e7;
+    border: 0.5px solid rgb(180, 180, 180);
+}
+.contenedorFotoIndividual:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.409);
 }
 
 .fotoIndividual{
-    border: 1px solid black;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 100px;
+    height: 120px;
 }
 
 .logo-links-foto-individual{ 
@@ -125,7 +133,7 @@ body{
   flex-direction: column;
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
-  position: absolute;
+  
   bottom: 0;
  }
 

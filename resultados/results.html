@@ -50,61 +50,28 @@
   <div class="container">
     <div>
       <input type="search" name="" id="search">
-      <button class="btn btn-warning" type="Buscar">Buscar</button>
+      <button class="btn btn-warning" type="Buscar" id="botonBusqueda">Buscar</button>
     </div>
   </div>
+
+  <br>
+
+  <div class="botonContainer">
+    <button id="botonCeliaco"type="button" class="btn btn-secondary"style="background-color: #FAE846">Celiaco </button>
+    <button id="botonDiabetico"type="button" class="btn btn-primary"style="background-color: #FA8076">Diabético</button>
+    <button id="botonVegano"type="button" class="btn btn-secondary"style="background-color: #9CFA50">Vegano </button>
+    <button id="botonVegetariano"type="button" class="btn btn-primary"style="background-color: #86D645">Vegetariano</button>
+    <button id="botonHipertenso"type="button" class="btn btn-secondary"style="background-color: #B3B1FA">Hipertenso</button>
+    <button id="botonIntoLactosa"type="button" class="btn btn-primary"style="background-color: #A751AB">Sin Lactosa</button>
+</div>
+
   </section>
   <br>
   <br>
   <!---------------------------------------------RESULTADOS---------------------------------------------------------->
-  
-  <section>
-    <div class="resultadoContainer">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="../imagenes/Oreos1.jfif" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Galletas Oreo</h5>
-                <p class="card-text">Galletitas dulces con cacao relleno de sabor a vainilla.</p>
-              </div>
-              <div class="card-footer">
-                <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> -->
-                <img class="sellos" src="../imagenes/sellovegan.png" alt="durazno" />
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="../imagenes/ceral.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Galletas Ceral</h5>
-                <p class="card-text">Galletitas dulces sabor limón sin azúcar.</p>
-              </div>
-              <div class="card-footer">
-                <img class="sellos" src="../imagenes/sellosugar.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="../imagenes/santa maria.webp" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Galletas Santa María</h5>
-                <p class="card-text">Galletitas sabor chocolate sin gluten.</p>
-              </div>
-              <div class="card-footer">
-                <img class="sellos" src="../imagenes/sintacc.png" alt="" />
-                
-              </div>
-            </div>
-          </div>
+  <section id="ResultadoCointainer">
 
-      </div>
-    </div>
-  </section>             
-  <br>
-  <br>
+  </section>
   <!----------------------------------------------FOOTER------------------------------------------------------------->  
   <footer class="footer">
     <div class="footer-logos">
@@ -119,4 +86,5 @@
     <!-- <a href="mailto:" class="btn">conectemos</a> -->
   </footer>
 </body>
+<script src="main.js"></script>
 </html>

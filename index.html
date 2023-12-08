@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">        
   <!--CSS-->
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/carrousel.css">
+    
     <title>Comida segura</title>
   </head>
   <body>
@@ -24,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Recetas</a>
@@ -33,7 +36,7 @@
           <a class="nav-link" href="#">Infografia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" >Sobre Nosotros</a>
+          <a class="nav-link" href="sobreNosotros/sobreNosotros.html">Sobre Nosotros</a>
         </li>
         </ul>
       </div>
@@ -44,18 +47,235 @@
     <div class="sombra">
       <img src="./imagenes/logo.png" class="img-fluid" alt="logo" class="d-inline-block align-center">
     </div>         
-  <!----------------------------------BUSCADOR------------------------------------------------------------->
+  <!----------------------------------BUSCADOR-------------------------------------------------------------->
     <div>
       <input type="search" name="" id="search">
-      <button class="btn btn-warning" type="Buscar">Buscar</button>
+      <button class="btn btn-warning" type="Buscar"  id="botonBusqueda">Buscar</button>
     </div>                
+
+    <br>
+<!-----------------------------------BOTONES DE TAGS-------------------------------------------------------->
+    <div>
+        <button id="botonCeliaco"type="button" class="btn btn-secondary"style="background-color: #FAE846">Celiaco </button>
+        <button id="botonDiabetico"type="button" class="btn btn-primary"style="background-color: #FA8076">Diabético</button>
+        <button id="botonVegano"type="button" class="btn btn-secondary"style="background-color: #9CFA50">Vegano </button>
+        <button id="botonVegetariano"type="button" class="btn btn-primary"style="background-color: #86D645">Vegetariano</button>
+        <button id="botonHipertenso"type="button" class="btn btn-secondary"style="background-color: #B3B1FA">Hipertenso</button>
+        <button id="botonIntoLactosa"type="button" class="btn btn-primary"style="background-color: #A751AB">Sin Lactosa</button>
+    </div>
   </section>
+
+  <!---------------------------------------Carrousel-------------------------------------------------------------->
+  <section id="tranding">
+    <div class="container">
+      <h3 class="text-center section-subheading"></h3>
+      <h1 class="text-center section-heading">Recetas mejor valoradas</h1>
+    </div>
+    <div class="container">
+      <div class="swiper tranding-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-1.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price">$100</h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Special Pizza
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-2.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price"></h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Meat Ball
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-3.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price"></h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Burger
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-4.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price"></h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Frish Curry
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-5.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price"></h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Pane Cake
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-6.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price"></h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Vanilla cake
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="imagenes/Carrousel/tranding-food-7.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <h1 class="food-price"></h1>
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">
+                  Straw Cake
+                </h2>
+                <h3 class="food-rating">
+                  <span>4.5</span>
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+        </div>
+
+        <div class="tranding-slider-control">
+          <div class="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="Js/script.js"></script>
+
   <!---------------------------------------RECETAS-------------------------------------------------------------->
   <div class="fondo">
   <section class="SectionRecetas">
     <div class="contenedorRecetas">  
       <div class="contenedorRecetaImg">
-        <img src="imagenesindex/imgreceta.png" alt="imagenreceta"class="fotosindex1">
+        <img src="imagenes/imgreceta.png" alt="imagenreceta"class="fotosindex1">
       </div>
       <div class= "contexto"> 
         <h5>Receta saludable</h5> 
@@ -68,7 +288,7 @@
     </div>
     <div class="contenedorRecetas">  
       <div class="contenedorRecetaImg" id="contenedorRecetaImgMedio" >
-        <img src="imagenesindex/imginfografia.png" alt="imageninfografia" class="fotosindex1">
+        <img src="imagenes/imginfografia.png" alt="imageninfografia" class="fotosindex1">
       </div>
       <div class= "contexto">
         <h5>Algunas recetas</h5>
@@ -79,7 +299,7 @@
     </div>
     <div class="contenedorRecetas">
       <div class="contenedorRecetaImg">
-        <img src="imagenesindex/imagengrupal1-0.png" alt="imagenequipo" class="fotosindex1" >
+        <img src="imagenes/imagengrupal1-0.png" alt="imagenequipo" class="fotosindex1" >
       </div>
       <div class= "contexto">
         <h5>Quiénes somos? </h5>

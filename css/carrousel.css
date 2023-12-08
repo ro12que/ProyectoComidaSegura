@@ -63,7 +63,7 @@ body {
 }
 
 .container {
-  max-width: 140rem;
+  max-width: 124rem;
   padding: 0 1rem;
   margin: 0 auto;
 }
@@ -86,7 +86,6 @@ body {
   #tranding {
     padding: 7rem 0;
   }
-  
 }
 
 #tranding .tranding-slider {
@@ -147,8 +146,15 @@ body {
   color: var(--white);
 }
 
+.food-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
 
-
+.rating ion-icon {
+  color: var(--primary);
+}
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
