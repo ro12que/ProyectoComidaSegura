@@ -123,7 +123,7 @@ botonBusqueda.addEventListener('click', function() {
                         <div class="card h-100"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
-                                    <h5 class="card-title">${product.product_name_es}</h5> 
+                                   <b> <h5 class="card-title">${product.product_name_es}</h5> </b>
                                     <p class="card-text">${product.generic_name}</p> 
                                 </div>
                                 <div class="card-footer"> 
