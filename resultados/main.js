@@ -1,4 +1,4 @@
-const API = `https://es.openfoodfacts.org/cgi/search.pl`;
+const API = `https://world.openfoodfacts.net/api/v2/search`;
 
 //------------------SISTEMA DE BOTONES-----------------------------------
 
@@ -97,13 +97,12 @@ botonBusqueda.addEventListener('click', function() {
     const queryParams = {
         search_terms: `${userSearch}`, // Reemplaza 'tu_termino_de_búsqueda' por tu término de búsqueda real
         page_size: 20,
-        json: {
-            countries: 'Argentina',
-            allergens_from_ingredients: [],
-            nutrient_levels: {
-            },
-            ingredients_analysis_tags: [],
-        }
+        countries_tags_en: "Argentina",
+        
+        /*
+        allergens_from_ingredients: [],
+        nutrient_levels: {},
+        ingredients_analysis_tags: [],*/
     };
 
     for (let i = 0; i < 6; i++) {
