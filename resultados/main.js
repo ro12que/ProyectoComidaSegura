@@ -1,4 +1,3 @@
-const API = `https://world.openfoodfacts.net/api/v2/search`;
 
 //------------------SISTEMA DE BOTONES-----------------------------------
 
@@ -94,11 +93,16 @@ botonBusqueda.addEventListener('click', function() {
     userSearch = userinput.value;
     console.log(userSearch);
 
+    const API = `https://es.openfoodfacts.org/cgi/search/pl`;
+    //https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}
+
+
     const queryParams = {
-        search_terms: `${userSearch}`, // Reemplaza 'tu_termino_de_búsqueda' por tu término de búsqueda real
-        page_size: 20,
+        search_terms: `(userSearch)`,
+        page_size: 30,
         countries_tags_en: "Argentina",
-        
+        //label_tags:  'vegan' // 'no Gluten' 'Vegetarian' 'Vegan' 'No lactose'
+        //allergens_tags: 'gluten' //milk, gluten
         /*
         allergens_from_ingredients: [],
         nutrient_levels: {},
@@ -140,11 +144,12 @@ botonBusqueda.addEventListener('click', function() {
     
     const queryString = new URLSearchParams(queryParams).toString();
     console.log(queryString)
+
     const APIProductSearch = `${API}?${queryString}`;
     console.log(APIProductSearch);
     console.log(queryParams);
 
-    //const APIProductSearch = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=20&json=true`;    
+   // const APIProductSearch = `https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}&page_size=20&json=true`;    
     const createRes = document.getElementById('ResultadoCointainer');
     const respuesta = fetch (APIProductSearch)
         .then(res => res.json())
