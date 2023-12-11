@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Detalles</title>
+    <link rel="stylesheet" href="details.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="color-modes.js"></script>
+</head>
+
+<body>
+    <div class="container-grl">
+        <div class="container">
+            <div class="left">
+                <img class="img" src="imganes/Oreo - 1.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="right">
+                <h2>Galletitas Oreo</h2>
+                <p>Texto de la descripción...</p>
+
+                <h2>Caracteristicas principales</h2>
+                <table class="details-table">
+                    <tr>
+                        <th>Fabricante</th>
+                        <td>Mondelez</td>
+                    </tr>
+                    <tr>
+                        <th>Marca</th>
+                        <td>Oreo</td>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>Clasicas</td>
+                    </tr>
+                    <tr>
+                        <th>Sabor</th>
+                        <td>Vainilla</td>
+                    </tr>
+                    <tr>
+                        <th>Peso neto </th>
+                        <td>354 g</td>
+                    </tr>
+                    <tr>
+                        <th>Formato de venta</th>
+                        <td>Unidad</td>
+                </table>
+                <h2>Más Detalles</h2>
+                <table class="details-table">
+                    <tr>
+                        <th>Tipo de Galletita</th>
+                        <td>Cacao</td>
+                    </tr>
+                    <tr>
+                        <th>Caracteristicas de la galleta</th>
+                        <td>Rellena</td>
+                    </tr>
+                    <tr>
+                        <th>Es dietetico</th>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <th>Es libre de gluten</th>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <th>con sal</th>
+                        <td>Si</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <a href="https://www.google.com/webhp?hl=es&ictx=2&sa=X&ved=0ahUKEwi84f2DmYeDAxV1qZUCHdLoDCcQPQgJ">
+            <div class="bottom-row">
+                <div class="bottom-card">
+                    <img src="imganes/Frutigram.webp" alt="Img">
+                    <h3>Frutigram </h3>
+                </a>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quis dolorum asperiores, adipisci expedita aut in quia. Maxime incidunt aliquid, perferendis, repudiandae harum quasi labore voluptas at ullam quia consequuntur.  </p>
+                </div>
+        
+        <a href="#">
+            <div class="bottom-card">
+                <img src="imganes/Playadito.jpeg" alt="Img">
+                <h3>Yerba playadito  </h3>
+            </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore fugit fugiat, autem cum aliquam nemo quo ducimus neque, asperiores quia adipisci. Illum, atque adipisci a dignissimos nobis enim expedita.  </p>
+            </div>
+        
+        <a href="#">
+            <div class="bottom-card">
+                <img src="imganes/Pure de tomate.webp" alt="Img">
+                <h3>Pure de Tomate Molto</h3>
+            </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, sequi placeat ex deleniti debitis sunt maxime nulla cumque suscipit. Nisi velit aperiam itaque molestias ut sequi aspernatur facilis repudiandae dignissimos. </p>
+            </div>
+       
+        
+            
+
+        </div>
+    </div>
+        <!-- Boton para cambiar de temas dark/light -->
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme"
+                    type="button"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-label="Toggle theme (auto)">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+              <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                  Light
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </div>  
+       <!-- Fin Boton para cambiar de temas dark/light -->
+</body>
+
+</html>
