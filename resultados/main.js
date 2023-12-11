@@ -117,9 +117,9 @@ botonBusqueda.addEventListener('click', function() {
             data.products.forEach(product => {
                 let elemento = document.createElement("div");
                 createRes.appendChild(elemento);
-                elemento.className = 'resultadoContainer col';
+                elemento.className = 'resultadoContainer';
                 elemento.innerHTML = `
-                    <div class="col"> 
+                  
                         <div class="card h-100"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
@@ -130,8 +130,7 @@ botonBusqueda.addEventListener('click', function() {
                                     <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
 
                                 </div> 
-                        </div> 
-                    </div>`;
+                        </div> `;
                     console.log(data);
                     
                 });

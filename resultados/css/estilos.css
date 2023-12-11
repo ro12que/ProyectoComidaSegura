@@ -54,15 +54,31 @@
 
   .fondo{
     background-image: url(../../imagenes/ejemplo1.png);
-}
+  }
   .resultadoContainer{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 300px;
+    height: 400px;
+    
+    
+
+  }
+  #ResultadoCointainer{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
   }
   .sellos{
     height: 80px;
     width: 80px;
   }
+  .card-img-top{
+    height: 50%;
+    width: 50%;
+  }
+
 
   /*-----------FOOTER------------*/
 
