@@ -12,7 +12,7 @@ var IntoLactosa = document.getElementById("botonIntoLactosa");//LISTO 6
 var TagDesignador = []
 
 Celiaco.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Celiaco') === false){
+if(TagDesignador.includes('Celiaco') === false){
     Celiaco = true;
     console.log(Celiaco)
     TagDesignador.push('Celiaco')
@@ -24,7 +24,7 @@ Celiaco.addEventListener('click', ()=>{
 });
             
 Diabetico.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Diabetico') === false){
+if(TagDesignador.includes('Diabetico') === false){
     Diabetico = true;
     console.log(Diabetico)
     TagDesignador.push('Diabetico')
@@ -36,7 +36,7 @@ Diabetico.addEventListener('click', ()=>{
 });
 
 Vegano.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Vegano') === false){
+if(TagDesignador.includes('Vegano') === false){
     Vegano = true;
     console.log(Vegano)
     TagDesignador.push('Vegano')
@@ -48,7 +48,7 @@ Vegano.addEventListener('click', ()=>{
 });
 
 Vegetariano.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Vegetariano') === false){
+if(TagDesignador.includes('Vegetariano') === false){
     Vegetariano = true;
     console.log(Vegetariano)
     TagDesignador.push('Vegetariano')
@@ -60,7 +60,7 @@ Vegetariano.addEventListener('click', ()=>{
 });
 
 Hipertenso.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Hipertenso') === false){
+if(TagDesignador.includes('Hipertenso') === false){
     Hipertenso = true;
     console.log(Hipertenso)
     TagDesignador.push('Hipertenso')
@@ -72,7 +72,7 @@ Hipertenso.addEventListener('click', ()=>{
 });
 
 IntoLactosa.addEventListener('click', ()=>{
-    if(TagDesignador.includes('intoLactosa') === false){
+if(TagDesignador.includes('intoLactosa') === false){
     IntoLactosa = true;
     console.log(IntoLactosa)
     TagDesignador.push('intoLactosa')
@@ -94,12 +94,16 @@ botonBusqueda.addEventListener('click', function() {
     userSearch = userinput.value;
     console.log(userSearch);
 
+    const API = `https://es.openfoodfacts.org/cgi/search/pl`;
+    //https://es.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(userSearch)}
+
+
     const queryParams = {
         search_terms: `${userSearch}`, // Reemplaza 'tu_termino_de_búsqueda' por tu término de búsqueda real
         page_size: 20,
         countries_tags_en: "Argentina",
         
-        /*
+/*
         allergens_from_ingredients: [],
         nutrient_levels: {},
         ingredients_analysis_tags: [],*/
@@ -118,19 +122,19 @@ botonBusqueda.addEventListener('click', function() {
                 break;
             case 'Celiaco':
                 queryParams.json.allergens_from_ingredients.push('gluten');
-                console.log('celiaco');
+console.log('celiaco');
                 break;
             case 'IntoLactosa':
                 queryParams.json.allergens_from_ingredients.push('lactose');
-                console.log('intolactosa');
+console.log('intolactosa');
                 break;
             case 'Vegetariano':
                 queryParams.json.ingredients_analysis_tags.push('en:vegetarian');
-                console.log('vegetariano');
+console.log('vegetariano');
                 break;
             case 'Vegano':
                 queryParams.json.ingredients_analysis_tags.push('en:vegan');
-                console.log('vegano');
+console.log('vegano');
                 break;
             default:
     
@@ -155,22 +159,44 @@ botonBusqueda.addEventListener('click', function() {
                 createRes.appendChild(elemento);
                 elemento.className = 'resultadoContainer col';
                 elemento.innerHTML = `
-                    <div class="col"> 
+                  <div class="col">
                         <div class="card"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
-                                    <h5 class="card-title">${product.product_name_es}</h5> 
+                                   <h5 class="card-title">${product.product_name_es}</h5>
                                     <p class="card-text">${product.generic_name}</p> 
                                 </div>
                                 <div class="card-footer"> 
+                                    <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
+
                                 </div> 
                         </div> 
                     </div>`;
-            });
-        })
-    .catch(error => {
-        console.error('error fecht-data', error);
-    })
+                                    });
+            })
+            .catch(error => {
+                console.error('error fecht-data', error);
+               let  carderror=document.createElement("div");
+               createRes.appendChild(carderror);
+               carderror.innerHTML= `
+               <div class="errorcard"> 
+                  <div class="errorimg1"> 
+                       <img src=  class="errorimg" alt="errorfoto">
+                   </div> 
+                   <div class="textoerror">
+                        <h4>ERROR NO SE PUDO REALIZAR LA  BÚSQUEDA!! pruebe lo siguiente: </h4>
+                          <ul>
+                            <li>solucion1</li>
+                            <li>solucion2</li>
+                            <li>solucion3</li>
+                            <li>solucion4</li>
+                          </ul>
+           
+                    </div>
+           </div>`;
+               
+
+            })
 
 })
 
