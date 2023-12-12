@@ -12,18 +12,17 @@ body{
     height: 100%;
     box-sizing: border-box;
 }
+/* ----------------------INICIO NAV---------------- */
 .navbar-brand{
     height: 57px;
     width: 35px;
   }
 
 .navbar{
-    background-color: #fbb034;
+    background-color: #9FBFA1;
     background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
-    height: 6vh;
+    height: 8vh;
     width: 100%;
-    /* position: sticky; */
-    top: 0;
 }
 
 .navbar-nav{
@@ -39,6 +38,7 @@ body{
 
 .navbar-nav li a {
   transition: color 0.3s ease-in-out;
+  font-family: 'Nunito', sans-serif;
 }
 .navbar-nav li a:hover {
   color: #fff;
@@ -54,7 +54,7 @@ body{
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #fbb034; 
+  background-color: #9FBFA1; 
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
   transform-origin: center;
@@ -67,13 +67,12 @@ body{
   font-size: medium;
 }
 
-/* -------------------------------------------- */
+/* ----------------FIN NAVBAR---------------------------- */
 
 
   
-/*SECCION RECETAS*/
+/*----------------SECCION RECETAS-----------*/
     .rece{
-        /* background-color: #edf7d1; */
         padding: 5rem;
     }
 
@@ -89,6 +88,14 @@ body{
         font-family: 'Roboto', sans-serif;
     }
 
+.card {
+      background-color: #89a750;
+      margin-left: 3px;
+      margin-right: 3px;
+  }
+.card img:hover {
+    opacity: 0.7;
+    }
 .card-group h5{
     color: white;
     text-align: center;
@@ -107,14 +114,10 @@ body{
     font-family: 'Roboto', sans-serif;   
 }
 
-.card {
-    background-color: #89a750;
-    margin-left: 3px;
-    margin-right: 3px;
-}
+
 /*FIN RECETAS*/
 
-.whatsapp {
+.subir-arriba {
     position:fixed;
     width:60px;
     height:60px;
@@ -127,11 +130,11 @@ body{
     font-size:30px;
     z-index:100;
   }
-  .whatsapp-icon {
+  .subir-arriba-icon {
     margin-top:13px;
   }
 
-  .whatsapp:hover {
+  .subir-arriba:hover {
     opacity: 0.7;
     }
 
