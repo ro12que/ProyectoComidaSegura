@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #E3F2DC;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    height: 57px;
+    width: 35px;
+  }
+
+.navbar{
+    background-color: #fbb034;
+    background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
+    height: 6vh;
+    width: 100%;
+    /* position: sticky; */
+    top: 0;
+}
+
+.navbar-nav{
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.navbar-nav li {
+  width: 150px;
+  height: max-content;
+}
+
+.navbar-nav li a {
+  transition: color 0.3s ease-in-out;
+}
+.navbar-nav li a:hover {
+  color: #fff;
+}
+.navbar-nav li a {
+  position: relative;
+  overflow: hidden;
+}
+.navbar-nav li a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px; 
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fbb034; 
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+.navbar-nav li a:hover::before {
+  transform: scaleX(1); 
+}
+/**/
+.nav-link{
+  font-size: medium;
+}
+
+/* -------------------------------------------- */
+
+
+  
+/*SECCION RECETAS*/
+    .rece{
+        /* background-color: #edf7d1; */
+        padding: 5rem;
+    }
+
+    .rece h1{
+        color: #487a2d;
+        text-align: center;
+        font-family: 'Walter Turncoat', cursive;
+    }
+    .rece p{
+        color: black;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'Roboto', sans-serif;
+    }
+
+.card-group h5{
+    color: white;
+    text-align: center;
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 1em;
+}
+.card-group h2{
+    color: #487a2d;
+    text-align: center;
+    font-family: 'Walter Turncoat', cursive;
+}
+.card-group p {
+    color: black;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;   
+}
+
+.card {
+    background-color: #89a750;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+/*FIN RECETAS*/
+
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#89a750;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  .whatsapp-icon {
+    margin-top:13px;
+  }
+
+  .whatsapp:hover {
+    opacity: 0.7;
+    }
+
+/*-----------FOOTER------------*/
+
+.footer{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbb034;
+    background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
+    align-self: baseline;
+    
+   }
+  
+  .footer-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 3rem;
+    
+  }
+  
+  .copy{
+  display: flex;
+  margin-top: 10px;
+  align-self:center;
+  
+   } 
+  
+  .logo-links{
+    color: #000;
+  
+  }
+  
