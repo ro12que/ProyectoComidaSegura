@@ -123,13 +123,10 @@ botonBusqueda.addEventListener('click', function() {
                         <div class="card h-100"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
-                                   <b> <h5 class="card-title">${product.product_name_es}</h5> </b>
+                                   <b> <h5 class="card-title" >${product.product_name_es}</h5> </b>  
                                     <p class="card-text">${product.generic_name}</p> 
                                 </div>
-                                <div class="card-footer"> 
-                                    <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
-
-                                </div> 
+                    
                         </div> `;
                     console.log(data);
                     
