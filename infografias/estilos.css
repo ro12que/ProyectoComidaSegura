@@ -5,12 +5,15 @@
   font-family: 'Nunito', sans-serif;
   /* font-size: 20px; */
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body{
-  background-color: #E3F2DC;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+    /* width: 100%;
+    height: 100%; */
+    /* box-sizing: border-box; */
+    display: flex;
+    flex-direction: column;
 }
 
 /*--- INICIO NAVBAR---*/
@@ -69,22 +72,53 @@ font-size: medium;
 }
 
 /* --------------FIN NAVBAR-------------- */
+
+.list-group-item.active {
+  background-color: #add466; /* Cambia "tu-color-aqui" al color deseado */
+  /* color: tu-color-de-texto-aqui; Cambia "tu-color-de-texto-aqui" al color deseado para el texto */
+}
+
+
 .container1{
           /* padding-top: 5rem;
           padding-left: 0;
           padding-right: 0; */
           padding: 5rem;
           margin-right: 8rem;
-          background-color: #cddead;
+          
 }
+
 .container2{
   padding: 5rem;
   margin-left: 8rem;
   background-color: #cddead;
+  border-radius: 20px;
 }
 /* ------------BANNER------------------- */
-.banner{
-  background-image: url(/imagenes/FondoCondimentos.jpg);
+.banner1{
+  background-image: url(https://0cf8d6ad6f.cbaul-cdnwnd.com/a33098e0b335b671544f63da6d4a683a/200000011-a4e8da5e29/celiaquia_trigo.jpg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+.banner2{
+  background-image: url(https://img.freepik.com/fotos-premium/concepto-comida-saludable-no-saludable_120794-472.jpg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+.banner3{
+  background-image: url(https://alimentoswiki.com/imagenes/lactosa-e1590046597649.jpg);
     background-position: top;
     background-size: cover;
     display: flex;

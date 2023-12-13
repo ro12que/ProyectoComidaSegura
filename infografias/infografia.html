@@ -6,13 +6,13 @@
     <title>Infografias</title>
      <!--Favicon-->
      <link rel="shortcut icon" href="./imagenes/logo-chiquito.png" />
-    <!--CSS-->
-    <link rel="stylesheet" href="estilos.css">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body id="arriba">
+    <!--CSS-->
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+<body id="arriba" style="background-color: #E3F2DC;">
   
   <!-----------------------------------------------------NAV-------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-secondary">
@@ -41,7 +41,7 @@
     </div>
 </nav>
   <!-- ------FIN NAV -->
-  <section class="banner">
+  <section class="banner1">
   
    </section> 
   <!-- -----INICIA INFO------------------- -->
@@ -50,26 +50,27 @@
     <div class="row">
       <div class="col-4">
         <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home" aria-selected="true">Home</a>
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile" aria-selected="false" tabindex="-1">Profile</a>
-          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages" aria-selected="false" tabindex="-1">Messages</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings" aria-selected="false" tabindex="-1">Settings</a>
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home" aria-selected="true">Celiaquía</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile" aria-selected="false" tabindex="-1">A tener en cuenta</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages" aria-selected="false" tabindex="-1">Alimentos permitidos</a>
         </div>
       </div>
       <div class="col-8">
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade active show" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-            <p>Some placeholder content in a paragraph relating to "Home". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+            <p>La Celiaquía es una intolerancia permanente a las proteínas del trigo, avena, cebada y centeno (TACC), comúnmente llamadas gluten, que afecta a las personas con predisposición genética.</p>
+            <p>El único tratamiento efectivo para la Celiaquía es mantener una alimentación libre de gluten de por vida, para lo cual resulta fundamental contar con disponibilidad de alimentos libres de gluten (ALG) seguros.
+              </p>
           </div>
           <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-            <p>Some placeholder content in a paragraph relating to "Profile". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+            <p>Los alimentos y bebidas industrializadas pueden contener gluten en su composición, ya sea como ingrediente principal (trigo, avena, cebada o centeno) o formando parte de aditivos, como espesantes, colorantes, aromatizantes, etc.</p>
+            <p>Es importante saber que también un alimento que naturalmente no lo contiene puede entrar en contacto con gluten durante el proceso de elaboración, a través de superficies, equipos, manipulador, transporte, etc., produciéndose así una contaminación cruzada del producto.</p>
           </div>
           <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-            <p>Some placeholder content in a paragraph relating to "Messages". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+            <p>Las personas celíacas únicamente deben consumir aquellos alimentos que hayan sido evaluados y autorizados como “libre de gluten” por las Autoridades Sanitarias y se encuentran en el Listado Integrado de ANMAT.</p>
+            <img src="/imagenes/alimento_sin_tacc.jpeg" class="img-fluid" alt="logo" class="d-inline-block align-center">
           </div>
-          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-            <p>Some placeholder content in a paragraph relating to "Settings". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -77,67 +78,41 @@
 
 </div> 
 <!-- <!- contenedor -> -->
-<br>
-<br>
-<div class="container2">
-  <div class="bd-example" role="tabpanel">
-    <div class="row">
-      <div class="col-4">
-        <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home" aria-selected="true">Home</a>
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile" aria-selected="false" tabindex="-1">Profile</a>
-          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages" aria-selected="false" tabindex="-1">Messages</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings" aria-selected="false" tabindex="-1">Settings</a>
-        </div>
-      </div>
-      <div class="col-8">
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade active show" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-            <p>Some placeholder content in a paragraph relating to "Home". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
-          </div>
-          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-            <p>Some placeholder content in a paragraph relating to "Profile". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
-          </div>
-          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-            <p>Some placeholder content in a paragraph relating to "Messages". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
-          </div>
-          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-            <p>Some placeholder content in a paragraph relating to "Settings". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</div> 
-<!-- <!- contenedor -> -->
-<br>
-<br>
+<section class="banner2">
+</section> 
+
 <div class="container1">
   <div class="bd-example" role="tabpanel">
     <div class="row">
       <div class="col-4">
         <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home" aria-selected="true">Home</a>
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile" aria-selected="false" tabindex="-1">Profile</a>
-          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages" aria-selected="false" tabindex="-1">Messages</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings" aria-selected="false" tabindex="-1">Settings</a>
+          <a class="list-group-item list-group-item-action active" id="list-home1-list" data-bs-toggle="tab" href="#list-home1" role="tab" aria-controls="list-home1" aria-selected="true">Diabetes</a>
+          <a class="list-group-item list-group-item-action" id="list-profile1-list" data-bs-toggle="tab" href="#list-profile1" role="tab" aria-controls="list-profile1" aria-selected="false" tabindex="-1">Plan alimentario</a>
+          <a class="list-group-item list-group-item-action" id="list-messages1-list" data-bs-toggle="tab" href="#list-messages1" role="tab" aria-controls="list-messages1" aria-selected="false" tabindex="-1">Sugerencias</a>
         </div>
       </div>
       <div class="col-8">
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade active show" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-            <p>Some placeholder content in a paragraph relating to "Home". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <div class="tab-pane fade active show" id="list-home1" role="tabpanel" aria-labelledby="list-home1-list">
+            <p>La diabetes es una enfermedad crónica que se caracteriza por presentar niveles altos de azúcar en sangre.
+            </p>
+            <p>Esto significa que acompaña toda la vida a la persona que la padece. Sin embargo, con un seguimiento y tratamiento adecuado se pueden prevenir complicaciones y llevar una vida normal.</p>
           </div>
-          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-            <p>Some placeholder content in a paragraph relating to "Profile". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <div class="tab-pane fade" id="list-profile1" role="tabpanel" aria-labelledby="list-profile1-list">
+            <p>Las personas con diabetes deben seguir un plan de alimentación individualizado ajustado a la edad, necesidades biológicas, a patologías concomitantes, cultura, estilo de vida, posibilidades económicas, actividad habitual y preferencias personales. 
+              </p>
           </div>
-          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-            <p>Some placeholder content in a paragraph relating to "Messages". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <div class="tab-pane fade" id="list-messages1" role="tabpanel" aria-labelledby="list-messages1-list">
+            <p>Esto incluye el consumo de alimentos variados de los cinco grupos principales: </p>
+            <p>1.Verduras y frutas</p>  
+            <p>2.Legumbres, cereales, papa, pan y pastas</p>
+            <p>3.Leche, yogur y queso</p>
+            <p>4.Carnes y huevos</p>
+            <p>5.Aceites, frutas secas y semillas; asegurando una adecuada ingesta de hidratos de carbono, proteínas, ácidos grasos esenciales, vitaminas, minerales y fibra dietaria.</p>
+            <img src="/imagenes/guias_alimentarias.jpg" class="img-fluid" alt="logo" class="d-inline-block align-center">
           </div>
-          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-            <p>Some placeholder content in a paragraph relating to "Settings". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -145,7 +120,39 @@
 
 </div> 
 <!-- <!- contenedor -> -->
+<section class="banner3">
+</section> 
+<div class="container1">
+  <div class="bd-example" role="tabpanel">
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home2-list" data-bs-toggle="tab" href="#list-home2" role="tab" aria-controls="list-home2" aria-selected="true">Alimentación Sin Lactosa</a>
+          <a class="list-group-item list-group-item-action" id="list-profile2-list" data-bs-toggle="tab" href="#list-profile2" role="tab" aria-controls="list-profile2" aria-selected="false" tabindex="-1">A tener en cuenta</a>
+          <a class="list-group-item list-group-item-action" id="list-messages2-list" data-bs-toggle="tab" href="#list-messages2" role="tab" aria-controls="list-messages2" aria-selected="false" tabindex="-1">Alimentos permitidos</a>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade active show" id="list-home2" role="tabpanel" aria-labelledby="list-home2-list">
+            <p>La lactosa es un tipo de azúcar que se encuentra en la leche y otros productos lácteos. El cuerpo necesita una enzima llamada lactasa para digerir la lactosa.</p>
+            <p>La intolerancia a la lactosa se presenta cuando el intestino delgado no produce suficiente cantidad de esta enzima.</p>
+            <p>Los síntomas en los niños incluyen diarrea y aumento de peso insuficiente, mientras que los síntomas en adultos incluyen hinchazón abdominal, cólicos, diarrea, flatulencia y náuseas.</p>
+          </div>
+          <div class="tab-pane fade" id="list-profile2" role="tabpanel" aria-labelledby="list-profile2-list">
+            <p>Reducir la ingesta de productos lácteos que contienen lactosa de la dieta casi siempre alivia los síntomas. También mire las etiquetas de los alimentos para buscar fuentes ocultas de lactosa en productos no lácteos (incluso algunas cervezas) y evitarlas.</p>
+           </div>
+          <div class="tab-pane fade" id="list-messages2" role="tabpanel" aria-labelledby="list-messages2-list">
+            <p>Se sugiere leer el listado de ingredientes,ya que a simple vista no se puede saber porque la lactosa se añade a muchos alimentos. Por ejempje: panes, embutidos, salsas, aperitivos, entre otros.</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
+</div> 
+<!-- <!- contenedor -> -->
 
   <!----------------------------------------------FOOTER------------------------------------------------------------->  
   <footer class="footer">

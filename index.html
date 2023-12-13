@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!--CSS-->
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/carrousel.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   </head>
-  <body id="arriba">
+  <body id="arriba" style="background-color: #E3F2DC;">
   <!-----------------------------------------------------NAV-------------------------------------------------------->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -32,7 +36,7 @@
           <a class="nav-link" href="recetas/recetas.html">Recetas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="infografias/infografia.html">Infografia</a>
+          <a class="nav-link" href="infografias/infografia.html">Infografía</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="sobreNosotros/sobreNosotros.html">Sobre Nosotros</a>
@@ -63,6 +67,45 @@
         <button id="botonIntoLactosa"type="button" class="btn btn-primary"style="background-color: #A751AB">Sin Lactosa</button>
     </div>
   </section>
+<!-- -----------------------------CARDS---------------------------- -->
+  <section>
+    <div class="info">
+      <div class="row row-cols-1 g-4 justify-content-center d-flex">
+          <div class="card-group">
+              <div class="card col-3"  >
+                <a href="infografias/infografia.html" target="_blank"><img src="imagenes/sellotacc.jpg" class="sombra card-img-top" alt=""></a>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">¿QUÉ ES LA CELIAQUIA?</p>
+                </div>
+                
+              </div>
+          <br>
+              <div class="card col-3" >
+                <a href="infografias/infografia.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj6Xz-3G0l7JxJ9z6t49Ar-ME_KgVu9qMvoA&usqp=CAU" class="sombra card-img-top" alt=""></a>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">¿QUÉ ES LA DIABETES?</p>
+                </div>
+                
+              </div>
+          <br>
+              <div class="card col-3" >
+                <a href="infografias/infografia.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHbRqGtRxqHuKtbrzOYmVhxFWcimLN-c3i9A&usqp=CAU" class="sombra card-img-top" alt=""></a>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">ALIMENTACIÓN SIN LACTOSA</p>
+                </div>
+                
+              </div>
+            </div>
+      </div>
+         
+      </div>
+    </div>
+  </section>
+
+
 
   <!---------------------------------------Carrousel-------------------------------------------------------------->
   <section id="tranding">
@@ -267,84 +310,8 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="Js/script.js"></script>
-
-  <!---------------------------------------CARDS-------------------------------------------------------------->
-  <section>
-    <div class="info">
-      <div class="row row-cols-1 cols-md-12 g-4 justify-content-center d-flex">
-          <div class="card-group">
-              <div class="card" style="width: 16rem; ">
-                <a href="" target="_blank"><img src="imagenes/sellotacc.jpg" class="sombra card-img-top" alt=""></a>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">¿QUÉ ES LA CELIAQUIA?</p>
-                </div>
-                
-              </div>
-          <br>
-              <div class="card" style="width: 16rem; ">
-                <a href="" target="_blank"><img src="imagenes/sellotacc.jpg" class="sombra card-img-top" alt=""></a>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">¿QUE ES LA DIABETES?</p>
-                </div>
-                
-              </div>
-          <br>
-              <div class="card" style="width: 16rem;">
-                <a href="" target="_blank"><img src="imagenes/sellotacc.jpg" class="sombra card-img-top" alt=""></a>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">¿Qué es la Intolerancia a la Lactosa?</p>
-                </div>
-                
-              </div>
-            </div>
-      </div>
-         
-      </div>
-    </div>
-  </section>
   
-  <!-- <div class="fondo">
-  <section class="SectionRecetas">
-    <div class="contenedorRecetas">  
-      <div class="contenedorRecetaImg">
-        <img src="imagenes/imgreceta.png" alt="imagenreceta"class="fotosindex1">
-      </div>
-      <div class= "contexto"> 
-        <h5>Receta saludable</h5> 
-        <p>
-        "Esta receta de pizza saludable la empecé a preparar para que sumen legumbres de
-        manera divertida y le pierdan el temor. Para mi sorpresa fue un completo éxito y nadie adivinó de qué era la masa, utiliza ingredientes 
-        variados como: porotos blancos para la masa, cebolla, ajo, almidón de maíz, queso sin TACC, salsa de tomate, aceitunas y rúcula" Eliana Spaccavento(Chef)
-        </p>
-      </div>
-    </div>
-    <div class="contenedorRecetas">  
-      <div class="contenedorRecetaImg" id="contenedorRecetaImgMedio" >
-        <img src="imagenes/imginfografia.png" alt="imageninfografia" class="fotosindex1">
-      </div>
-      <div class= "contexto">
-        <h5>Algunas recetas</h5>
-        <p>En esta seccion encontrarás recetas variadas para veganos, desde pizzas, sopas, platos principales
-        y más... 
-        </p>
-      </div>
-    </div>
-    <div class="contenedorRecetas">
-      <div class="contenedorRecetaImg">
-        <img src="imagenes/imagengrupal1-0.png" alt="imagenequipo" class="fotosindex1" >
-      </div>
-      <div class= "contexto">
-        <h5>Quiénes somos? </h5>
-        <p>Somos un grupo de 5 programadores entusiasmados  en  ayudar a las personas con dificultades alimenticias a que puedan
-        tener una herramienta que los ayude a elegir sus alimentos.
-        </p>
-      </div>
-    </div>
-    </section> -->
+
   <!----------------------------------------------FOOTER------------------------------------------------------------->  
   <footer class="footer">
     <div class="footer-logos">
@@ -362,4 +329,5 @@
   <a class="subir-arriba" href="index.html#arriba"><img src="imagenes/flecha.png" alt="subir-arriba" style="max-width: 60px;"></a>
           
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+  <script src="Js/script.js"></script>  
+</body>

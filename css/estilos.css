@@ -16,7 +16,7 @@ html {
     flex-direction: column;
  }
 
-/*---------->INICIO NAVBAR<-----------*/
+/*----------INICIO NAVBAR<-----------*/
 .navbar-brand{
   height: 57px;
   width: 35px;
@@ -100,9 +100,9 @@ html {
   z-index: 1;width:35vw; height:15vw;
 }
 
-.sombra:hover {
+/* .sombra:hover {
   filter: opacity(.5);
-}
+} */
 
 .containerSearch{
   width: 100%;
@@ -208,16 +208,16 @@ html {
 .info h1{
   color: #487a2d;
   text-align: center;
-  font-family: 'Walter Turncoat', cursive;
+  font-family: 'Raleway', sans-serif;
 }
 .info p{
   color: black;
   text-align: center;
   font-size: 1em;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 .card {
-    background-color: #ffe15b;
+    background-color: #CFFC79;
     /* margin-left: 15px;
     margin-right: 15px; */
     margin: 4rem;
@@ -237,7 +237,7 @@ font-family: 'Walter Turncoat', cursive;
 color: black;
 text-align: center;
 font-size: 1em;
-font-family: 'Roboto', sans-serif;   
+font-family: 'Raleway', sans-serif;  
 }
 
  /*------------->CARDS<------------*/
