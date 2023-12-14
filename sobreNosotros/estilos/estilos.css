@@ -1,35 +1,90 @@
-body{
-    background: radial-gradient(#5e3f0c, #fbb034);
-    background-color: radial-gradient(#5e3f0c, #fbb034);
-    color: radial-gradient(#5e3f0c, #fbb034);
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;  
     font-size: 20px;
 }
-
-.navbar{
-    background-color: #fbb034;
-    background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
-    height: 10vh;
-    width: 100%;
-}
-.logoGrande{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 6;
+html {
+    scroll-behavior: smooth;
+  }
+  body{
+    background-color: #E3F2DC;
     display: flex;
+    flex-direction: column;
+ }
+/* ---------------NAVBAR----------------------- */
+.navbar-brand{
+    height: 57px;
+    width: 35px;
+  }
+  .navbar{
+      background-color: #9FBFA1;
+      background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
+      height: 8vh;
+      width: 100%;
+  }
+  
+  .navbar-nav{
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .navbar-nav li {
+    width: 150px;
+    height: max-content;
+  }
+  
+  .navbar-nav li a {
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  .navbar-nav li a:hover {
+    color: #fff;
+  }
+  .navbar-nav li a {
+    position: relative;
+    overflow: hidden;
+  }
+  .navbar-nav li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px; 
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #9FBFA1; 
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+  .navbar-nav li a:hover::before {
+    transform: scaleX(1); 
+  }
+  
+  .nav-link{
+    font-size: medium;
+  }
+  
+  
+  /* --------------FIN NAVBAR-------------- */
+  .buscador{
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
-
-}
-
-
+    padding-bottom: 50px;
+  }
+  .img-fluid{
+    height: 300px;
+    width: 100%;
+    float: center;
+    z-index: 1;width:35vw; height:15vw;
+  }
 
 
 .textoSobreFotoGrupal{
@@ -40,11 +95,6 @@ body{
 }
 
 
-
- .navbar-brand{
-   height: 60px;
-   width: 60px;
- }
  /*------------->Section fotos<------------*/
 
  .contenedorFotoGrupal{
@@ -125,34 +175,58 @@ body{
 
  /*------------->Footer<------------*/
  .footer{
-  height: auto;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #fbb034;
-  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbb034;
+    background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
+    align-self: baseline;
+    
+   }
   
-  bottom: 0;
- }
-
-
-.footer-logos {
+  .footer-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 3rem;
+    
+  }
+  
+  .copy{
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  gap: 3rem;
-}
+  margin-top: 10px;
+  align-self:center;
+  
+   } 
+  
+  .logo-links{
+    color: #000;
+  
+  }
+/*-----------------FIN FOOTER--------------  */
 
-.copy{
-display: flex;
-margin-top: 10px;
-align-self:center;
- } 
-
-.logo-links{
-  color: #000;
-}
-
+.subir-arriba {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#89a750;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  .subir-arriba-icon {
+    margin-top:13px;
+  }
+  
+  .subir-arriba:hover {
+    opacity: 0.7;
+    }
+  

@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;  
     font-size: 20px;
 }
 
@@ -16,65 +16,61 @@ html {
     flex-direction: column;
  }
 /*---------->NAVBAR<-----------*/
-
+.navbar-brand{
+  height: 57px;
+  width: 35px;
+}
 .navbar{
-  background-color: #fbb034;
-  background-image: linear-gradient(315deg, #fbb034 50%, #ffdd00 50%);
-  height: 6vh;
-  width: 100%;
-  position: sticky;
-  top: 0;
+    background-color: #9FBFA1;
+    background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
+    height: 8vh;
+    width: 100%;
 }
 
 .navbar-nav{
-width: 100%;
-justify-content: space-between;
-text-align: center;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .navbar-nav li {
-width: 150px;
-height: max-content;
+  width: 150px;
+  height: max-content;
 }
 
 .navbar-nav li a {
-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  font-family: 'Raleway', sans-serif;  
+  /* font-weight: bold; */
 }
-
 .navbar-nav li a:hover {
-color: #fff;
+  color: #fff;
 }
-
 .navbar-nav li a {
-position: relative;
-overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .navbar-nav li a::before {
-content: '';
-position: absolute;
-bottom: -3px; 
-left: 0;
-width: 100%;
-height: 3px;
-background-color: #fbb034; 
-transition: transform 0.3s ease-in-out;
-transform: scaleX(0);
-transform-origin: center;
+  content: '';
+  position: absolute;
+  bottom: -3px; 
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #9FBFA1; 
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center;
 }
-
 .navbar-nav li a:hover::before {
-transform: scaleX(1); 
+  transform: scaleX(1); 
 }
 
 .nav-link{
-font-size: medium;
+  font-size: medium;
 }
 
-.navbar-brand{
- height: 44px;
- width: 30px;
-}
+
 
  /*------------->BUSCADOR<------------*/
 
@@ -229,7 +225,7 @@ padding: 32px;
 
   /*-----------FOOTER------------*/
 
- .footer{
+  .footer{
     height: auto;
     width: 100%;
     padding: 20px;
@@ -237,8 +233,8 @@ padding: 32px;
     display: flex;
     flex-direction: column;
     background-color: #fbb034;
-    background-image: linear-gradient(315deg, #ffdd00  50%, #fbb034 50%);
-   align-self: baseline;
+    background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
+    align-self: baseline;
     
    }
   

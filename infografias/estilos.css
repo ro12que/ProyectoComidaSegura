@@ -2,8 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
-  /* font-size: 20px; */
+  font-family: 'Raleway', sans-serif;  
+    font-size: 20px;
 }
 html {
   scroll-behavior: smooth;
@@ -42,7 +42,8 @@ height: max-content;
 
 .navbar-nav li a {
 transition: color 0.3s ease-in-out;
-font-family: 'Nunito', sans-serif;
+font-family: 'Raleway', sans-serif; 
+font-weight: bold;
 }
 .navbar-nav li a:hover {
 color: #fff;
@@ -96,7 +97,7 @@ font-size: medium;
 }
 /* ------------BANNER------------------- */
 .banner1{
-  background-image: url(https://0cf8d6ad6f.cbaul-cdnwnd.com/a33098e0b335b671544f63da6d4a683a/200000011-a4e8da5e29/celiaquia_trigo.jpg);
+  background-image: url(/imagenes/banner-trigo.jpg);
     background-position: top;
     background-size: cover;
     display: flex;
@@ -107,7 +108,7 @@ font-size: medium;
     padding-bottom: 150px;
 }
 .banner2{
-  background-image: url(https://img.freepik.com/fotos-premium/concepto-comida-saludable-no-saludable_120794-472.jpg);
+  background-image: url(/imagenes/banner-dieta.png);
     background-position: top;
     background-size: cover;
     display: flex;
@@ -118,7 +119,7 @@ font-size: medium;
     padding-bottom: 150px;
 }
 .banner3{
-  background-image: url(https://alimentoswiki.com/imagenes/lactosa-e1590046597649.jpg);
+  background-image: url(/imagenes/banner-lactosa.jpg);
     background-position: top;
     background-size: cover;
     display: flex;

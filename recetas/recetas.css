@@ -2,10 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;  
     font-size: 20px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body{
     background-color: #E3F2DC;
     width: 100%;
@@ -38,7 +40,8 @@ body{
 
 .navbar-nav li a {
   transition: color 0.3s ease-in-out;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Raleway', sans-serif;  
+  font-weight: bold;
 }
 .navbar-nav li a:hover {
   color: #fff;
@@ -80,12 +83,14 @@ body{
         color: #487a2d;
         text-align: center;
         font-family: 'Walter Turncoat', cursive;
+         
     }
     .rece p{
         color: black;
         text-align: center;
         font-size: 1em;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
+        font-family: 'Raleway', sans-serif;  
     }
 
 .card {
@@ -111,7 +116,8 @@ body{
     color: black;
     text-align: center;
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;   
+    font-family: 'Roboto', sans-serif;  
+    
 }
 
 
