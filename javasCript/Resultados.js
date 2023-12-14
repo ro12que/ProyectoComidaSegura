@@ -252,26 +252,26 @@ botonBusqueda.addEventListener('click', function () {
                                     </table>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="Html/results-Fruti.html">
                                 <div class="bottom-row">
                                     <div class="bottom-card">
-                                        <img src="imagenes/Frutigran" alt="Img">
+                                        <img src="imagenes/Frutigram.webp" alt="Img">
                                         <h3>Frutigran </h3>
                                     </a>
                                         <p>Galletitas de cereales con chocolate</p>
                                     </div>
                             
-                            <a href="#">
+                            <a href="Html/results-Yerba.html">
                                 <div class="bottom-card">
-                                    <img src="imagenes/Playadito" alt="Img">
+                                    <img src="imagenes/Playadito.jpeg" alt="Img">
                                     <h3>Yerba playadito  </h3>
                                 </a>
                                     <p>Yerba Mate (hojas y palo) </p>
                                 </div>
                             
-                            <a href="#">
+                            <a href="Html/results-Pure.html">
                                 <div class="bottom-card">
-                                    <img src="Pure de tomate" alt="Img">
+                                    <img src="imagenes/Pure de tomate.webp" alt="Img">
                                     <h3>Pure de Tomate Molto</h3>
                                 </a>
                                     <p>Pure de tomate</p>
