@@ -1,4 +1,4 @@
-const API = `https://world.openfoodfacts.net/api/v2/search`;
+const API = `https://es.openfoodfacts.org/cgi/search.pl`;
 
 //------------------SISTEMA DE BOTONES-----------------------------------
 
@@ -9,78 +9,48 @@ var Vegetariano = document.getElementById("botonVegetariano");//LISTO
 var Hipertenso = document.getElementById("botonHipertenso");//LISTO
 var IntoLactosa = document.getElementById("botonIntoLactosa");//LISTO 6
 
-var TagDesignador = []
+const trolo = []
 
 Celiaco.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Celiaco') === false){
     Celiaco = true;
     console.log(Celiaco)
-    TagDesignador.push('Celiaco')
-    console.log(TagDesignador)
-    }else{
-        TagDesignador = TagDesignador.filter(tag=> tag != 'Celiaco');
-        console.log(TagDesignador)
-    }
+    trolo.push('Celiaco')
+    console.log(trolo)
 });
             
 Diabetico.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Diabetico') === false){
     Diabetico = true;
     console.log(Diabetico)
-    TagDesignador.push('Diabetico')
-    console.log(TagDesignador)
-    }else{
-        TagDesignador = TagDesignador.filter(tag=> tag != 'Diabetico');
-        console.log(TagDesignador)
-    }
+    trolo.push('Diabetico')
+    console.log(trolo)
 });
 
 Vegano.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Vegano') === false){
     Vegano = true;
     console.log(Vegano)
-    TagDesignador.push('Vegano')
-    console.log(TagDesignador)
-    }else{
-        TagDesignador = TagDesignador.filter(tag=> tag != 'Vegano');
-        console.log(TagDesignador)
-    }
+    trolo.push('Vegano')
+    console.log(trolo)
 });
 
 Vegetariano.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Vegetariano') === false){
     Vegetariano = true;
     console.log(Vegetariano)
-    TagDesignador.push('Vegetariano')
-    console.log(TagDesignador)
-    }else{
-        TagDesignador = TagDesignador.filter(tag=> tag != 'Vegetariano');
-        console.log(TagDesignador)
-    }
+    trolo.push('Vegetariano')
+    console.log(trolo)
 });
 
 Hipertenso.addEventListener('click', ()=>{
-    if(TagDesignador.includes('Hipertenso') === false){
     Hipertenso = true;
     console.log(Hipertenso)
-    TagDesignador.push('Hipertenso')
-    console.log(TagDesignador)
-    }else{
-        TagDesignador = TagDesignador.filter(tag=> tag != 'Hipertenso');
-        console.log(TagDesignador)
-    }
+    trolo.push('Hipertenso')
+    console.log(trolo)
 });
 
 IntoLactosa.addEventListener('click', ()=>{
-    if(TagDesignador.includes('intoLactosa') === false){
     IntoLactosa = true;
     console.log(IntoLactosa)
-    TagDesignador.push('intoLactosa')
-    console.log(TagDesignador)
-    }else{
-        TagDesignador = TagDesignador.filter(tag=> tag != 'intoLactosa');
-        console.log(TagDesignador)
-    }
+    trolo.push('intoLactosa')
+    console.log(trolo)
 });
 
 
@@ -97,40 +67,34 @@ botonBusqueda.addEventListener('click', function() {
     const queryParams = {
         search_terms: `${userSearch}`, // Reemplaza 'tu_termino_de_búsqueda' por tu término de búsqueda real
         page_size: 20,
-        countries_tags_en: "Argentina",
-        
-        /*
-        allergens_from_ingredients: [],
-        nutrient_levels: {},
-        ingredients_analysis_tags: [],*/
+        json: {
+            allergens_from_ingredients: [],
+            nutrient_levels: {
+            },
+            ingredients_analysis_tags: [],
+        }
     };
 
     for (let i = 0; i < 6; i++) {
     
-        switch (TagDesignador[i]) {
-            case 'Diabetico':
-                queryParams.json.nutrient_levels.push('sugar: low');
-                console.log('diabtico');
+        switch (trolo[i]) {
+            case Diabetico:
+                queryParams.json.nutrient_levels.sugar ='low';
                 break;
-            case 'Hipertenso':
-                queryParams.json.nutrient_levels.push('salt: low');
-                console.log('hipertenso');
+            case Hipertenso:
+                queryParams.json.nutrient_levels.salt ='low';
                 break;
-            case 'Celiaco':
+            case Celiaco:
                 queryParams.json.allergens_from_ingredients.push('gluten');
-                console.log('celiaco');
                 break;
-            case 'IntoLactosa':
+            case IntoLactosa:
                 queryParams.json.allergens_from_ingredients.push('lactose');
-                console.log('intolactosa');
                 break;
-            case 'Vegetariano':
+            case Vegetariano:
                 queryParams.json.ingredients_analysis_tags.push('en:vegetarian');
-                console.log('vegetariano');
                 break;
-            case 'Vegano':
+            case Vegano:
                 queryParams.json.ingredients_analysis_tags.push('en:vegan');
-                console.log('vegano');
                 break;
             default:
     
@@ -153,24 +117,44 @@ botonBusqueda.addEventListener('click', function() {
             data.products.forEach(product => {
                 let elemento = document.createElement("div");
                 createRes.appendChild(elemento);
-                elemento.className = 'resultadoContainer col';
+                elemento.className = 'resultadoContainer';
                 elemento.innerHTML = `
-                    <div class="col"> 
-                        <div class="card"> 
+                  
+                        <div class="card h-100"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
-                                    <h5 class="card-title">${product.product_name_es}</h5> 
+                                   <b> <h5 class="card-title" >${product.product_name_es}</h5> </b>  
                                     <p class="card-text">${product.generic_name}</p> 
                                 </div>
-                                <div class="card-footer"> 
-                                </div> 
-                        </div> 
-                    </div>`;
-            });
-        })
-    .catch(error => {
-        console.error('error fecht-data', error);
-    })
+                    
+                        </div> `;
+                    console.log(data);
+                    
+                });
+            })
+            .catch(error => {
+                console.error('error fecht-data', error);
+               let  carderror=document.createElement("div");
+               createRes.appendChild(carderror);
+               carderror.innerHTML= `
+               <div class="errorcard"> 
+                  <div class="errorimg1"> 
+                       <img src=  class="errorimg" alt="errorfoto">
+                   </div> 
+                   <div class="textoerror">
+                        <h4>ERROR NO SE PUDO REALIZAR LA  BÚSQUEDA!! pruebe lo siguiente: </h4>
+                          <ul>
+                            <li>solucion1</li>
+                            <li>solucion2</li>
+                            <li>solucion3</li>
+                            <li>solucion4</li>
+                          </ul>
+           
+                    </div>
+           </div>`;
+               
+
+            })
 
 })
 

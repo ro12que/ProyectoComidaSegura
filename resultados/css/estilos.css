@@ -11,7 +11,7 @@ html {
 }
 
  body{
-    background-color: #fffcfe;
+    background-color: #E3F2DC;
     display: flex;
     flex-direction: column;
  }
@@ -201,27 +201,41 @@ padding: 32px;
     color: #000;
   }
 
-  /*---------RESULTADOS---------*/
+/*---------RESULTADOS---------*/
 
 .fondo{
   background-image: url(../../imagenes/ejemplo1.png);
 }
-
-#resultadocontainer{
-  display: flex;
-  flex-direction: row;
-}
-
 .resultadoContainer{
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 30%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: 300px;
+  height: 400px;
+    
+}
+.resultadoContainer h5{
+  font-weight: bold;
+}
+.card{
+background-color: #add466;
 }
 
+#ResultadoCointainer{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+}
 .sellos{
   height: 80px;
   width: 80px;
 }
+.card-img-top{
+  height: 60%;
+  width: 100%;
+}
+
 
   /*-----------FOOTER------------*/
 

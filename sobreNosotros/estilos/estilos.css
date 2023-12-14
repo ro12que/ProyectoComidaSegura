@@ -69,6 +69,10 @@ html {
   
   
   /* --------------FIN NAVBAR-------------- */
+ .descripcion{
+            padding-right: 4rem;
+            padding-left: 4rem;
+ }
   .buscador{
     background-position: top;
     background-size: cover;
@@ -77,7 +81,7 @@ html {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
   }
   .img-fluid{
     height: 300px;
