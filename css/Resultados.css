@@ -217,8 +217,9 @@ padding: 32px;
 .resultadoContainer h5{
   font-weight: bold;
 }
-.card{
-background-color: #add466;
+.card {
+  background-color: #add466;
+  height: 100%;
 }
 
 #ResultadoCointainer{
@@ -227,15 +228,29 @@ background-color: #add466;
  flex-wrap: wrap;
  justify-content: center;
 }
+
+.resultadoContainer {
+  margin: 10px;
+  width: 350px; /* Ajusta según tus necesidades */
+  height: 450px; /* Ajusta según tus necesidades */
+
+}
+
 .sellos{
   height: 80px;
   width: 80px;
 }
-.card-img-top{
+.card-img-top {
+  object-fit: cover;
   height: 60%;
   width: 100%;
 }
-
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 
   /*-----------FOOTER------------*/
 
@@ -249,6 +264,8 @@ background-color: #add466;
     background-color: #fbb034;
     background-image: linear-gradient(315deg, #add466 50%, #CFFC79 50%);
     align-self: baseline;
+    position:fixed;
+    bottom: 0;
     
    }
   

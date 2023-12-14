@@ -95,7 +95,7 @@ botonBusqueda.addEventListener('click', function () {
     const API = `https://ar.openfoodfacts.org/cgi/search.pl`; //nuestra hermosa api
 
     const queryParams = {
-        json:{},
+        json: {},
         search_terms: `${userSearch}`,
         page_size: 20,
         action: 'process',
@@ -104,40 +104,40 @@ botonBusqueda.addEventListener('click', function () {
     for (let i = 0; i < 6; i++) {
 
         switch (TagDesignador[i]) {
-                case 'Diabetico':
-                queryParams.tagtype_1=`'nutrient_levels'`;
-                queryParams.tag_contains_1= `'contains'`;
-                queryParams.tag_1=`en:"sugar in low quantity"`;
+            case 'Diabetico':
+                queryParams.tagtype_1 = `'nutrient_levels'`;
+                queryParams.tag_contains_1 = `'contains'`;
+                queryParams.tag_1 = `en:"sugar in low quantity"`;
                 console.log('diabtico');
                 break;
-                case 'Hipertenso':
-                    queryParams.tagtype_2=`'nutrient_levels'`;
-                    queryParams.tag_contains_2=`'contains'`;
-                    queryParams.tag_2=`'en:salt in low quantity'`;
+            case 'Hipertenso':
+                queryParams.tagtype_2 = `'nutrient_levels'`;
+                queryParams.tag_contains_2 = `'contains'`;
+                queryParams.tag_2 = `'en:salt in low quantity'`;
                 console.log('hipertenso');
-                break; 
-                case 'Celiaco':
-                        queryParams.tagtype_3='allergens';
-                        queryParams.tag_contains_3='does_not_contain';
-                        queryParams.tag_3=`en:gluten`;
+                break;
+            case 'Celiaco':
+                queryParams.tagtype_3 = 'allergens';
+                queryParams.tag_contains_3 = 'does_not_contain';
+                queryParams.tag_3 = `en:gluten`;
                 console.log('celiaco');
                 break;
-                case 'intoLactosa':
-                    queryParams.tagtype_4= `allergens_tags`;
-                    queryParams.tag_contains_4=`does_not_contain`;
-                    queryParams.tag_4= `en:Milk`;
+            case 'intoLactosa':
+                queryParams.tagtype_4 = `allergens_tags`;
+                queryParams.tag_contains_4 = `does_not_contain`;
+                queryParams.tag_4 = `en:Milk`;
                 console.log('intolactosa');
-                break; 
-                case 'Vegetariano':
-                    queryParams.tagtype_5=`ingredients-analysis`;
-                    queryParams.tag_contains_5=`contains`;
-                    queryParams.tag_5=`en:vegetarian`;
+                break;
+            case 'Vegetariano':
+                queryParams.tagtype_5 = `ingredients-analysis`;
+                queryParams.tag_contains_5 = `contains`;
+                queryParams.tag_5 = `en:vegetarian`;
                 console.log('vegetariano');
                 break;
-                case 'Vegano':
-                    queryParams.tagtype_6=`ingredients-analysis`;
-                    queryParams.tag_contains_6= `contains`;
-                    queryParams.tag_6=`en:vegan`;
+            case 'Vegano':
+                queryParams.tagtype_6 = `ingredients-analysis`;
+                queryParams.tag_contains_6 = `contains`;
+                queryParams.tag_6 = `en:vegan`;
                 console.log('vegano');
                 break;
             default:
@@ -152,52 +152,165 @@ botonBusqueda.addEventListener('click', function () {
     console.log(APIProductSearch);
     console.log(queryParams);
 
-//-------------------SISTEMA DE FETCH------------------------------------
+    //-------------------SISTEMA DE FETCH------------------------------------
 
     const createRes = document.getElementById('ResultadoCointainer');
     const respuesta = fetch(APIProductSearch)
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            data.products.forEach(product => {
-                let elemento = document.createElement("div");
-                createRes.appendChild(elemento);
-                elemento.className = 'resultadoContainer';
-                elemento.innerHTML = `
-                        <div class="card"> 
-                            <img src= ${product.image_front_url} class="card-img-top" alt="...">
-                                <div class="card-body"> 
-                                   <h5 class="card-title">${product.product_name_es}</h5>
-                                    <p class="card-text">${product.generic_name}</p> 
-                                </div>
-                                <div class="card-footer"> 
-                                    <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
+            let elemento = document.createElement("div");
+                    
+            const detallesProductoElemento = document.getElementById('ResultadoCointainer');
 
-                                </div> 
+            detallesProductoElemento.innerHTML = ` `;
+            data.products.forEach(product => {
+                if (  product.product_name_es !== null &&
+                    product.product_name_es !== undefined &&
+                    product.generic_name !== null &&
+                    product.image_front_url !== null &&
+                    product.image_front_url !== undefined &&
+                    product.generic_name !== null &&
+                    product.generic_name !== undefined) {
+
+                    let elemento = document.createElement("div");
+                    createRes.appendChild(elemento);
+                    elemento.className = 'resultadoContainer';
+                    elemento.innerHTML = `
+                    <div class="card"> 
+                    <img src= ${product.image_front_url} class="card-img-top" alt="...">
+                        <div class="card-body"> 
+                           <h5 class="card-title">${product.product_name_es}</h5>
+                            <p class="card-text">${product.generic_name}</p> 
+                        </div>
+                        <div class="card-footer"> 
+                            <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> --> 
+
                         </div> 
-                    </div>`;
-            });
-        })
-        .catch(error => {
-            console.error('error fecht-data', error);
-            let carderror = document.createElement("div");
-            createRes.appendChild(carderror);
-            carderror.innerHTML = `
-               <div class="errorcard"> 
-                  <div class="errorimg1"> 
-                       <img src=  class="errorimg" alt="errorfoto">
-                   </div> 
-                   <div class="textoerror">
-                        <h4>ERROR NO SE PUDO REALIZAR LA  BÚSQUEDA!! pruebe lo siguiente: </h4>
-                          <ul>
-                            <li>solucion1</li>
-                            <li>solucion2</li>
-                            <li>solucion3</li>
-                            <li>solucion4</li>
-                          </ul>
-           
-                    </div>
-           </div>`;
-        })
+                        </div> 
+                     </div>`;
+                    console.log(data);
+                    elemento.addEventListener('click', function () {
+                        handleCardClick(product);
+                        console.log(product.product_name_es);
+
+
+                        function handleCardClick(product) {
+                            selectedProduct = product;
+
+                            // Obtén el elemento HTML donde deseas mostrar los detalles del producto
+                            const detallesProductoElemento = document.getElementById('ResultadoCointainer');
+
+                            detallesProductoElemento.innerHTML = ` `;
+                            // Modifica el contenido del elemento con los detalles del producto
+                            detallesProductoElemento.innerHTML = `
+                            <div class="container-container">
+                            <div class="container-grl">
+                            <div class="container-detalles">
+                                <div class="left">
+                                    <img class="img" src="${product.image_front_url}" alt="Descripción de la imagen">
+                                </div>
+                                <div class="right">
+                                    <h2>${product.product_name_es}</h2>
+                                    <p>${product.generic_name}</p>
+                    
+                                    <h2>Caracteristicas principales</h2>
+                                    <table class="details-table">
+                                        <tr>
+                                            <th>Fabricante</th>
+                                            <td>${product.brands}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Marca</th>
+                                            <td>${product.product_name_es}</td>
+                                        </tr>
+
+                                    <h2>Más Detalles</h2>
+                                    <table class="details-table">
+                                        <tr>
+                                            <th>Alergenos</th>
+                                            <td>${product.tallergens_hierarchy}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Caracteristicas de la galleta</th>
+                                            <td>Rellena</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Es dietetico</th>
+                                            <td>No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Es libre de gluten</th>
+                                            <td>No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>con sal</th>
+                                            <td>Si</td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="bottom-row">
+                                    <div class="bottom-card">
+                                        <img src="imagenes/Frutigran" alt="Img">
+                                        <h3>Frutigran </h3>
+                                    </a>
+                                        <p>Galletitas de cereales con chocolate</p>
+                                    </div>
+                            
+                            <a href="#">
+                                <div class="bottom-card">
+                                    <img src="imagenes/Playadito" alt="Img">
+                                    <h3>Yerba playadito  </h3>
+                                </a>
+                                    <p>Yerba Mate (hojas y palo) </p>
+                                </div>
+                            
+                            <a href="#">
+                                <div class="bottom-card">
+                                    <img src="Pure de tomate" alt="Img">
+                                    <h3>Pure de Tomate Molto</h3>
+                                </a>
+                                    <p>Pure de tomate</p>
+                                </div>
+                           
+                            
+                                
+                    
+                            </div>
+                        </div> 
+                        </div>`;
+
+                            // Puedes realizar acciones adicionales aquí, según tus necesidades
+                            console.log('Producto seleccionado:', selectedProduct);
+                        }
+
+
+                    });
+                }
+
+            })
+
+        });
+
 
 })
+
+
+function handleCardClick(product) {
+    var selectedProduct = product;
+    console.log('Producto seleccionado:', selectedProduct);
+    // Aquí puedes realizar cualquier acción adicional con el producto seleccionado
+    // Por ejemplo, mostrar los detalles del producto en algún lugar de la pantalla.
+}
+
+/*                                    <!--<img class="sellos" src=${sellosValor} alt="durazno"/>
+                                    <img class="sellos" src=${sellosValordos} alt="durazno"/> 
+                                    <img class="sellos" src=${sellosValortres} alt="durazno"/> -->
+    sellosValor = 7;
+    var sellosAsignacion = document.getElementsByClassName("sellos").src = sellosValor;
+    var resultado = array.forEach(element => {
+
+});*/

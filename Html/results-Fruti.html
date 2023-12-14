@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <title>Comida segura</title>
   <!--Favicon-->
-    <link rel="shortcut icon" href="/imagenes/logo-chiquito.png" />
+    <link rel="shortcut icon" href="../imagenes/logo-chiquito.png" />
   <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!--CSS-->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/carrousel.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../css/carrousel.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,23 +23,23 @@
   <!-----------------------------------------------------NAV-------------------------------------------------------->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <img class="navbar-brand" src="./imagenes/logo-chiquito.png" alt="durazno" />
+      <img class="navbar-brand" src="../imagenes/logo-chiquito.png" alt="durazno" />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Html/recetas.html">Recetas</a>
+          <a class="nav-link" href="recetas.html">Recetas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Html/infografia.html">Infografía</a>
+          <a class="nav-link" href="infografia.html">Infografía</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Html/sobreNosotros.html">Sobre Nosotros</a>
+          <a class="nav-link" href="sobreNosotros.html">Sobre Nosotros</a>
         </li>
         </ul>
       </div>
@@ -76,45 +76,79 @@
 
     
 <!-- -----------------------------CARDS---------------------------- -->
-  <section>
-    <div class="info">
-      <div class="row row-cols-1 g-4 justify-content-center d-flex">
-          <div class="card-group">
-              <div class="card col-3"  >
-                <a href="Html/infografia.html" target="_blank"><img src="imagenes/sellotacc.jpg" class="sombra card-img-top" alt=""></a>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">¿QUÉ ES LA CELIAQUIA?</p>
-                </div>
+<div class="container-container">
+    <div class="container-grl">
+    <div class="container-detalles">
+        <div class="left">
+            <img class="img" src="../imagenes/Frutigram.webp" alt="Descripción de la imagen">
+        </div>
+        <div class="right">
+            <h2>Frutigram</h2>
+            <p>Galletita de cereales con chocolate</p>
+
+            <h2>Caracteristicas principales</h2>
+            <table class="details-table">
+                <tr>
+                    <th>Fabricante</th>
+                    <td>Granix</td>
+                </tr>
+                <tr>
+                    <th>Marca</th>
+                    <td>Frutigram</td>
+                </tr>
+
+            <h2>Más Detalles</h2>
+            <table class="details-table">
+                <tr>
+                    <th>Es dietetico</th>
+                    <td>Si</td>
+                </tr>
+                <tr>
+                    <th>Es libre de gluten</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>con sal</th>
+                    <td>Si</td>
+                </tr>
                 
-              </div>
-          <br>
-              <div class="card col-3" >
-                <a href="Html/infografia.html" target="_blank"><img src="imagenes/card-diabetes.jfif" class="sombra card-img-top" alt=""></a>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">¿QUÉ ES LA DIABETES?</p>
-                </div>
-                
-              </div>
-          <br>
-              <div class="card col-3" >
-                <a href="Html/infografia.html" target="_blank"><img src="imagenes/card-lactosa.png" class="sombra card-img-top" alt=""></a>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">ALIMENTACIÓN SIN LACTOSA</p>
-                </div>
-                
-              </div>
-            </div>
-      </div>
-         
-      </div>
+            </table>
+        </div>
     </div>
-  </section>
+    <a href="results-Yerba.html">
+        <div class="bottom-row">
+            <div class="bottom-card">
+                <img src="../imagenes/Playadito.jpeg" alt="Img">
+                <h3>Playadito</h3>
+            </a>
+                <p>Yerba mate</p>
+            </div>
+    
+    <a href="results-Oreo.html">
+        <div class="bottom-card">
+            <img src="../imagenes/Oreo - 1.webp" alt="Img">
+            <h3>Oreo</h3>
+        </a>
+            <p>Galletita de chocolate </p>
+        </div>
+    
+    <a href="results-Pure.html">
+        <div class="bottom-card">
+            <img src="../imagenes/Pure de tomate.webp" alt="Img">
+            <h3>Pure de Tomate Molto</h3>
+        </a>
+            <p>Pure de tomate</p>
+        </div>
+   
+    
+        
 
-
+    </div>
+</div> 
+</div>`
 </section>
+
+
   <!---------------------------------------Carrousel-------------------------------------------------------------->
   <section id="tranding">
     <div class="container">
@@ -127,7 +161,7 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img" >
-              <img src="imagenes/recetas/rece1.jpg" alt="Tranding"></a>
+              <img src="../imagenes/recetas/rece1.jpg" alt="Tranding"></a>
             </div>
             <div class="tranding-slide-content">
               <h1 class="food-price"></h1>
@@ -147,7 +181,7 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              <img src="imagenes/recetas/rece2.jpg" alt="Tranding">
+              <img src="../imagenes/recetas/rece2.jpg" alt="Tranding">
             </div>
             <div class="tranding-slide-content">
               <h1 class="food-price"></h1>
@@ -166,7 +200,7 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              <img src="imagenes/recetas/rece3.jpg" alt="Tranding">
+              <img src="../imagenes/recetas/rece3.jpg" alt="Tranding">
             </div>
             <div class="tranding-slide-content">
               <h1 class="food-price"></h1>
@@ -186,7 +220,7 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              <img src="imagenes/recetas/rece4.jpg" alt="Tranding">
+              <img src="../imagenes/recetas/rece4.jpg" alt="Tranding">
             </div>
             <div class="tranding-slide-content">
               <h1 class="food-price"></h1>
@@ -206,7 +240,7 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              <img src="imagenes/recetas/rece5.jpg" alt="Tranding">
+              <img src="../imagenes/recetas/rece5.jpg" alt="Tranding">
             </div>
             <div class="tranding-slide-content">
               <h1 class="food-price"></h1>
@@ -229,7 +263,7 @@
           <!-- Slide-start -->
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              <img src="imagenes/recetas/rece6.jpg" alt="Tranding">
+              <img src="../imagenes/recetas/rece6.jpg" alt="Tranding">
             </div>
             <div class="tranding-slide-content">
               <h1 class="food-price"></h1>
@@ -284,6 +318,6 @@
   <a class="subir-arriba" href="index.html#arriba"><img src="imagenes/flecha.png" alt="subir-arriba" style="max-width: 60px;"></a>
           
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="javasCript/Carrousel.js"></script>  
-  <script src="javasCript/Resultados.js"></script>
+  <script src="../javasCript/Carrousel.js"></script>  
+  <script src="../javasCript/Resultados.js"></script>
 </body>
