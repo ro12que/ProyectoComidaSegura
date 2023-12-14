@@ -1,3 +1,5 @@
+const apiKey = 'b2106bbbfa044569aaa77f6df7dcccd1';
+const apiSecret = '17253d3e9a3d419fb04b46ae90835bf4';
 //------------------SISTEMA CAPTURA DE BOTONES-----------------------------------
 
 var Celiaco = document.getElementById("botonCeliaco");//LISTO
@@ -89,16 +91,31 @@ const botonBusqueda = document.getElementById("botonBusqueda");
 botonBusqueda.addEventListener('click', function () {
 
     const userinput = document.getElementById('search') //se toma la busqueda del usuario
-    userSearch = userinput.value;
-    console.log(userSearch);
+    searchTerm = userinput.value;
+    console.log(searchTerm);
 
-    const API = `https://ar.openfoodfacts.org/cgi/search.pl`; //nuestra hermosa api
+    const apiUrl = `https://platform.fatsecret.com/rest/server.api`; //nuestra hermosa api nueva 
+
+    function generateNonce() {
+        const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let nonce = '';
+        for (let i = 0; i < 32; i++) {
+          nonce += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return nonce;
+      }
+
+    const oauthParams = {
+        oauth_consumer_key: apiKey,
+        oauth_signature_method: 'HMAC-SHA1',
+        oauth_timestamp: Math.floor(Date.now() / 1000),
+        oauth_nonce: generateNonce(), // Genera un valor aleatorio único para oauth_nonce
+        oauth_version: '1.0',
+    };
 
     const queryParams = {
-        json:{},
-        search_terms: `${userSearch}`,
-        page_size: 20,
-        action: 'process',
+        method:'food.get',
+        
     };
 
     for (let i = 0; i < 6; i++) {
@@ -146,18 +163,63 @@ botonBusqueda.addEventListener('click', function () {
         }
     };
 
-    const queryString = new URLSearchParams(queryParams).toString();
-    console.log(queryString)
-    const APIProductSearch = `${API}?${queryString}`;
-    console.log(APIProductSearch);
+    //const queryString = new URLSearchParams(queryParams).toString();
+    //console.log(queryString)
+    //const APIProductSearch = `${API}?${queryString}`;
+    //console.log(APIProductSearch);
     console.log(queryParams);
 
 
 //-------------------SISTEMA DE FETCH------------------------------------
 
 
+
+const url = `${apiUrl}?method=foods.search&format=json&search_expression=${searchTerm}&oauth_consumer_key=${apiKey}`;
+
+function createSignatureBaseString(method, url, parameters) {
+    // Encode each parameter key and value
+    const encodedParams = Object.keys(parameters)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(parameters[key])}`)
+      .join('&');
+  
+    // Encode the URL
+    const encodedUrl = encodeURIComponent(url);
+  
+    // Combine method, URL, and parameters into the signature base string
+    const signatureBaseString = `${method.toUpperCase()}&${encodedUrl}&${encodeURIComponent(encodedParams)}`;
+  
+    return signatureBaseString;
+  }
+
+// Crear la cadena base para la firma
+const signatureBaseString = createSignatureBaseString('GET', apiUrl, oauthParams);
+
+function calculateSignature(signatureBaseString, consumerSecret, tokenSecret = '') {
+    const key = `${encodeURIComponent(consumerSecret)}`;
+  
+    const crypto = require('crypto'); // En Node.js
+    const hmac = crypto.createHmac('sha1', key);
+    hmac.update(signatureBaseString);
+  
+    const signature = hmac.digest('base64');
+  
+    return signature;
+  }
+
+// Calcular la firma HMAC-SHA1
+const signature = calculateSignature(signatureBaseString, apiSecret);
+
+// Agregar la firma a los parámetros OAuth
+oauthParams.oauth_signature = signature;
+
+// Construir la URL con los parámetros OAuth
+const queryString = new URLSearchParams(oauthParams).toString();
+const requestUrl = `${apiUrl}?${queryString}&method=foods.search&format=json&search_expression=${searchTerm}`;
+
+// Realizar la solicitud utilizando fetch
+
     const createRes = document.getElementById('ResultadoCointainer');
-    const respuesta = fetch(APIProductSearch)
+    const respuesta = fetch(requestUrl)
         .then(res => res.json())
         .then(data => {
             console.log(data)

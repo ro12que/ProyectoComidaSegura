@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "oauth-1.0a": "^2.2.6"
+  }
+}
