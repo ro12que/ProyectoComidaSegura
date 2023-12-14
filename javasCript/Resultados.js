@@ -12,7 +12,7 @@ var TagDesignador = [] //guarda los valores de los  botones que se clickean
 Celiaco.addEventListener('click', () => {
     if (TagDesignador.includes('Celiaco') === false) {
         Celiaco = true;
-        console.log(Celiaco)
+        console.log('el usuario agrego a la lista personalizada "celiaco"')
         TagDesignador.push('Celiaco')
         console.log(TagDesignador)
     } else {
@@ -90,7 +90,7 @@ botonBusqueda.addEventListener('click', function () {
 
     const userinput = document.getElementById('search') //se toma la busqueda del usuario
     userSearch = userinput.value;
-    console.log(userSearch);
+    console.log(`los parametros de busqueda del usuario son ${userSearch}`);
 
     const API = `https://ar.openfoodfacts.org/cgi/search.pl`; //nuestra hermosa api
 
@@ -115,12 +115,12 @@ botonBusqueda.addEventListener('click', function () {
                 queryParams.tag_contains_2 = `'contains'`;
                 queryParams.tag_2 = `'en:salt in low quantity'`;
                 console.log('hipertenso');
-                break;
-            case 'Celiaco':
-                queryParams.tagtype_3 = 'allergens';
-                queryParams.tag_contains_3 = 'does_not_contain';
-                queryParams.tag_3 = `en:gluten`;
-                console.log('celiaco');
+                break; 
+                case 'Celiaco':
+                        queryParams.tagtype_3='allergens';
+                        queryParams.tag_contains_3='does_not_contain';
+                        queryParams.tag_3=`en:gluten`;
+                console.log('los tags celiaco se agregaron correctamente a la bsuqueda');
                 break;
             case 'intoLactosa':
                 queryParams.tagtype_4 = `allergens_tags`;
@@ -147,17 +147,18 @@ botonBusqueda.addEventListener('click', function () {
     };
 
     const queryString = new URLSearchParams(queryParams).toString();
-    console.log(queryString)
+    //console.log(`${queryString}`)
     const APIProductSearch = `${API}?${queryString}`;
-    console.log(APIProductSearch);
+    console.log(`los query params son:`);
     console.log(queryParams);
-
+    console.log(`la url final es: ${APIProductSearch}`);
     //-------------------SISTEMA DE FETCH------------------------------------
 
     const createRes = document.getElementById('ResultadoCointainer');
     const respuesta = fetch(APIProductSearch)
         .then(res => res.json())
         .then(data => {
+            console.log(`el array de objetos es:`)
             console.log(data)
             let elemento = document.createElement("div");
                     
