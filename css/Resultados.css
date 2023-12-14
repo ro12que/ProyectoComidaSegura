@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+.navbar{
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 50%, #ffdd00 50%);
+  height: 10vh;
+  width: 100%;
+}
+
+
+body{
+  background-color: #fffcfe;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-brand{
+ height: 90px;
+ width: 60px;
+}
+
+
+/*------------->BUSCADOR<------------*/
+.buscador{
+text-align: center;
+}
+
+
+.img-fluid{
+  height: 300px;
+  width: 100%;
+  float: center;
+  z-index: 1;width:35vw; height:15vw;
+}
+
+
+.sombra:hover {
+filter: opacity(.5);
+}
+
+
+.btn-warning{
+ background-color: #fbb034 ;
+
+}
+
+/*---------RESULTADOS---------*/
+
+.fondo{
+  background-image: url(../../imagenes/ejemplo1.png);
+}
+.resultadoContainer{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 300px;
+  height: 400px;
+  
+  
+
+}
+#ResultadoCointainer{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+.sellos{
+  height: 80px;
+  width: 80px;
+}
+.card-img-top{
+  height: 50%;
+  width: 100%;
+}
+
+
+/*-----------FOOTER------------*/
+
+.footer{
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #ffdd00  50%, #fbb034 50%);
+ align-self: baseline;
+ margin-top: auto;
+ position: fixed;
+  bottom: 0;
+  
+ }
+
+.footer-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 3rem;
+  
+}
+
+.copy{
+display: flex;
+margin-top: 10px;
+align-self:center;
+
+ } 
+
+.logo-links{
+  color: #000;
+
+}
