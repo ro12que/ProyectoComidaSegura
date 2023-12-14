@@ -105,15 +105,15 @@ botonBusqueda.addEventListener('click', function () {
 
         switch (TagDesignador[i]) {
                 case 'Diabetico':
-                queryParams.push(`tagtype_1: 'nutrient_levels',`);
-                queryParams.push(`tag_contains_1: 'contains',`)
-                queryParams.push(`tag_1: en: "sugar in low quantity"',`)
+                queryParams.tagtype_1=`'nutrient_levels'`;
+                queryParams.tag_contains_1= `'contains'`;
+                queryParams.tag_1=`en:"sugar in low quantity"`;
                 console.log('diabtico');
                 break;
                 case 'Hipertenso':
                     queryParams.tagtype_2=`'nutrient_levels'`;
                     queryParams.tag_contains_2=`'contains'`;
-                    queryParams.tag_2=`'en salt in low quantity',`;
+                    queryParams.tag_2=`'en:salt in low quantity'`;
                 console.log('hipertenso');
                 break; 
                 case 'Celiaco':
@@ -122,22 +122,22 @@ botonBusqueda.addEventListener('click', function () {
                         queryParams.tag_3=`en:gluten`;
                 console.log('celiaco');
                 break;
-                case 'IntoLactosa':
-                    queryParams.tagtype_4= `'allergens'`;
-                    queryParams.tag_contains_4=`'does_not_contain'`;
-                    queryParams.tag_4= `'en: milk'`;
+                case 'intoLactosa':
+                    queryParams.tagtype_4= `allergens_tags`;
+                    queryParams.tag_contains_4=`does_not_contain`;
+                    queryParams.tag_4= `en:Milk`;
                 console.log('intolactosa');
                 break; 
                 case 'Vegetariano':
-                    queryParams.push(`tagtype_5: 'ingredients-analysis',`);
-                    queryParams.push(`tag_contains_5: 'contains',`)
-                    queryParams.push(`tag_5: 'en:vegetarian',`)
+                    queryParams.tagtype_5=`ingredients-analysis`;
+                    queryParams.tag_contains_5=`contains`;
+                    queryParams.tag_5=`en:vegetarian`;
                 console.log('vegetariano');
                 break;
                 case 'Vegano':
-                    queryParams.push(`tagtype_6: 'ingredients-analysis',`);
-                    queryParams.push(`tag_contains_6: 'contains',`)
-                    queryParams.push(`tag_6: 'en: vegan',`)
+                    queryParams.tagtype_6=`ingredients-analysis`;
+                    queryParams.tag_contains_6= `contains`;
+                    queryParams.tag_6=`en:vegan`;
                 console.log('vegano');
                 break;
             default:
