@@ -202,3 +202,4 @@ botonBusqueda.addEventListener('click', function () {
         })
 
 })
+
