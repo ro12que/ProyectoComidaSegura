@@ -162,9 +162,8 @@ botonBusqueda.addEventListener('click', function () {
             data.products.forEach(product => {
                 let elemento = document.createElement("div");
                 createRes.appendChild(elemento);
-                elemento.className = 'resultadoContainer col';
+                elemento.className = 'resultadoContainer';
                 elemento.innerHTML = `
-                  <div class="col">
                         <div class="card"> 
                             <img src= ${product.image_front_url} class="card-img-top" alt="...">
                                 <div class="card-body"> 
