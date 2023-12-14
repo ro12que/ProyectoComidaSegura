@@ -1,3 +1,51 @@
+const express = require('express');
+const fetch = require('node-fetch');
+const OAuth = require('oauth-1.0a');
+
+const app = express();
+
+const apiKey = 'TU_CLAVE_API';
+const apiSecret = 'TU_SECRETO_API';
+const apiUrl = 'https://platform.fatsecret.com/rest/server.api';
+
+const oauth = OAuth({
+    consumer: { key: apiKey, secret: apiSecret },
+    signature_method: 'HMAC-SHA1',
+    hash_function(base_string, key) {
+      return crypto.createHmac('sha1', key).update(base_string).digest('base64');
+    },
+  });
+
+  app.get('/search', async (req, res) => {
+    const userQuery = req.query.query; // El término de búsqueda del usuario
+  
+    const requestData = {
+      url: apiUrl,
+      method: 'GET',
+      data: { method: 'foods.search', search_expression: userQuery, format: 'json' },
+    };
+  
+    const requestHeaders = oauth.toHeader(oauth.authorize(requestData));
+  
+    try {
+      const response = await fetch(`${apiUrl}?method=foods.search&search_expression=${userQuery}&format=json`, {
+        method: 'GET',
+        headers: {
+          ...requestHeaders,
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      const data = await response.json();
+      res.json(data); // Enviar los datos al frontend
+    } catch (error) {
+      res.status(500).json({ error: 'Error al obtener los datos' });
+    }
+  });
+
+  app.listen(3000, () => {
+    console.log('Servidor escuchando en el puerto 3000');
+  });
 //------------------SISTEMA CAPTURA DE BOTONES-----------------------------------
 
 var Celiaco = document.getElementById("botonCeliaco");//LISTO
@@ -89,16 +137,11 @@ const botonBusqueda = document.getElementById("botonBusqueda");
 botonBusqueda.addEventListener('click', function () {
 
     const userinput = document.getElementById('search') //se toma la busqueda del usuario
-    userSearch = userinput.value;
-    console.log(userSearch);
+    searchTerm = userinput.value;
+    console.log(searchTerm);
 
-    const API = `https://ar.openfoodfacts.org/cgi/search.pl`; //nuestra hermosa api
 
     const queryParams = {
-        json:{},
-        search_terms: `${userSearch}`,
-        page_size: 20,
-        action: 'process',
     };
 
     for (let i = 0; i < 6; i++) {
@@ -146,18 +189,10 @@ botonBusqueda.addEventListener('click', function () {
         }
     };
 
-    const queryString = new URLSearchParams(queryParams).toString();
-    console.log(queryString)
-    const APIProductSearch = `${API}?${queryString}`;
-    console.log(APIProductSearch);
-    console.log(queryParams);
-
-
 //-------------------SISTEMA DE FETCH------------------------------------
 
-
     const createRes = document.getElementById('ResultadoCointainer');
-    const respuesta = fetch(APIProductSearch)
+    const respuesta = fetch()
         .then(res => res.json())
         .then(data => {
             console.log(data)
